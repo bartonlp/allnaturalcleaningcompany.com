@@ -1,0 +1,23 @@
+{
+    "siteDomain": "allnaturalcleaningcompany.com",
+    "siteName": "AllNatural",
+    "mainTitle": "All Natural Cleaning",
+    "path": "/var/www/allnaturalcleaningcompany",
+    "className": "SiteClass",
+    "copyright": "2016 All Natural Cleaning Company",
+    "author": "Barton L. Phillips, mailto:bartonphillips@gmail.com, http://www.bartonphillips.com",
+    "masterdb": "barton",
+    "dbinfo": {
+        "host": "localhost",
+        "user": "barton",
+        "password": "7098653",
+        "database": "allnatural",
+        "engine": "mysqli"
+    },
+    "headFile": "SITE_ROOT/includes/head.i.php",
+    "bannerFile": "SITE_ROOT/includes/banner.i.php",
+    "footerFile": "SITE_ROOT/includes/footer.i.php",
+    "count": true,
+    "countMe": true,
+    "myUri": "bartonphillips.dyndns.org"
+}

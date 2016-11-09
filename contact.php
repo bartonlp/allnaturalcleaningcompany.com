@@ -1,8 +1,8 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
 //ErrorClass::setDevelopment(true);
-$S = new $_site['className']($_site);
+$S = new $_site->className($_site);
 $h->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">

@@ -14,9 +14,9 @@
         "database": "allnatural",
         "engine": "mysqli"
     },
-    "headFile": "SITE_ROOT/includes/head.i.php",
-    "bannerFile": "SITE_ROOT/includes/banner.i.php",
-    "footerFile": "SITE_ROOT/includes/footer.i.php",
+    "headFile": "includes/head.i.php",
+    "bannerFile": "includes/banner.i.php",
+    "footerFile": "includes/footer.i.php",
     "count": true,
     "countMe": true,
     "myUri": "bartonphillips.dyndns.org"

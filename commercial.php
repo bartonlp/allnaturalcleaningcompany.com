@@ -1,7 +1,7 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$S = new $_site->className($_site);
 $h->title = "Commercial Janitorial Service - All Natural Cleaning Company";
 $h->desc = "Comercial Janitorial service in Albuquerque. All Natural products, no harmfull chemicals or toxins.";
 

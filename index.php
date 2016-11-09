@@ -1,7 +1,7 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$S = new $_site->className($_site);
 $h->title = "Albuquerque, New Mexico - All Natural Cleaning Company";
 $h->desc = "All Natural Cleaning Company of Albuquerque. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 

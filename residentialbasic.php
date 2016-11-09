@@ -1,7 +1,7 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$S = new $_site->className($_site);
 $h->title = "Home Cleaning Basic Plan - All Natural Cleaning Company";
 $h->desc = "Our basic home cleaning plan. We use no toxic chemical, only natural products.";
 

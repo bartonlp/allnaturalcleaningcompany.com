@@ -1,9 +1,0 @@
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-/.jekyll-metadata
-/_site/
-/benchmarks/*.html
-/benchmarks/generated
-/node_modules/
-/npm-debug.log

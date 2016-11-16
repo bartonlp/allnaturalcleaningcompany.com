@@ -93,6 +93,9 @@ list($top, $footer) = $S->getPageTopBottom($h, $b);
 
 if(isset($_POST['submit'])) {
   extract($_POST);
+  $subject = $S->escape($subject);
+  $message = $S->escape($message);
+  
   $S->query("insert into contact_emails (site, email, name, subject, message, created) ".
             "values('$S->siteName', '$email', '$name', '$subject', '$message', now())");
 

@@ -70,7 +70,7 @@ return <<<EOF
       <i class="icon-twitter"></i>
       <span></span>
     </a>
-    <a itemprop="sameAs" href="https://www.facebook.com/All-Natural-Cleaning-Company-495591230635431/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+    <a itemprop="sameAs" href="https://www.facebook.com/allnaturalcleaningcompany/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
     <a href="http://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
 </span>  
 </div>

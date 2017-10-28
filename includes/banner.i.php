@@ -2,8 +2,8 @@
 
 return <<<EOF
 <header id="header">
-<img src="http://bartonphillips.net/images/allnatural/BubbleLogo.png" alt="bubble-logo">
-<img id="logo" src="http://bartonphillips.net/images/blank.png" alt="blank image">
+<img src="https://bartonphillips.net/images/allnatural/BubbleLogo.png" alt="bubble-logo">
+<img id="logo" src="https://bartonphillips.net/images/blank.png" alt="blank image">
 <img id='dummyimg' src='/tracker.php?page=normal&id=$this->LAST_ID' alt="blank image">
 <div>
 All Natural Cleaning Company
@@ -42,7 +42,7 @@ html {
   display:block;
 }
 </style>
-<link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/css/allnatural.css"/>
+<link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/css/allnatural.css"/>
 <p>
 <img src="/tracker.php?page=noscript&id=$this->LAST_ID" alt="noscript image">
 Your browser either does not support <b>JavaScripts</b> or you have JavaScripts disabled, in either case your browsing

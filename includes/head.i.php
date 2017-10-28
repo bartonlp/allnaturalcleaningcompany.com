@@ -56,6 +56,7 @@ return <<<EOF
   <meta name="description" content="{$arg['desc']}"/>
   <meta name="keywords" content="$keywords"/>
   <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="vBqb7BadCBGAHjG87iKhlKuzIDgauuxWa2lLP_p8UEE" />
   <!-- Structured Data -->
   $structData
   <!-- ICONS, RSS -->
@@ -68,31 +69,31 @@ html {
   </style>
   {$arg['link']}
 <!--
-  <link rel="preload" href="http://bartonphillips.net/css/allnatural/allnatural.css" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://bartonphillips.net/css/allnatural/allnatural.css" onload="this.rel='stylesheet'">
 
-  <link rel="preload" href="http://bartonphillips.net/css/allnatural/social/css/font-awesome.css" onload="this.rel='stylesheet'">
-  <link rel="preload" href="http://bartonphillips.net/css/allnatural/social/css/style.css" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://bartonphillips.net/css/allnatural/social/css/font-awesome.css" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://bartonphillips.net/css/allnatural/social/css/style.css" onload="this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/allnatural.css">
-    <link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/social/css/font-awesome.css">
-    <link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/social/css/style.css">
+    <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
+    <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/font-awesome.css">
+    <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/style.css">
   </noscript>
 -->
-  <link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/allnatural.css">
-  <link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/social/css/font-awesome.css">
-  <link rel="stylesheet" href="http://bartonphillips.net/css/allnatural/social/css/style.css">
+  <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
+  <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/font-awesome.css">
+  <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/style.css">
 
   <!-- jQuery and Javascripts -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script> var lastId = $this->LAST_ID; </script>
-  <script src="http://bartonphillips.net/js/tracker.js"></script>
-<!--  <script src="http://bartonphillips.net/js/loadCSS.js"></script>
-  <script src="http://bartonphillips.net/js/cssrelpreload.js"></script> -->
+  <script src="https://bartonphillips.net/js/tracker.js"></script>
+<!--  <script src="https://bartonphillips.net/js/loadCSS.js"></script>
+  <script src="https://bartonphillips.net/js/cssrelpreload.js"></script> -->
 
   <script>
-//loadCSS("http://bartonphillips.net/css/allnatural/allnatural.css");
-//loadCSS("http://bartonphillips.net/css/allnatural/social/css/font-awesome.css");
-//loadCSS("http://bartonphillips.net/css/allnatural/social/css/style.css");
+//loadCSS("https://bartonphillips.net/css/allnatural/allnatural.css");
+//loadCSS("https://bartonphillips.net/css/allnatural/social/css/font-awesome.css");
+//loadCSS("https://bartonphillips.net/css/allnatural/social/css/style.css");
   </script>
   <!-- Custom Scripts -->
 {$arg['extra']}

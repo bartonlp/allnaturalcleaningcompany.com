@@ -1,6 +1,5 @@
 #!/bin/bash
 # Backup the database before starting.
-# I create a file CE_BACKUP.sql which can be used to create a new database
 cd /var/www/allnaturalcleaningcompany
 dir=other
 bkupdate=`date +%B-%d-%y`

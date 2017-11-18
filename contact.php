@@ -84,7 +84,7 @@ pre {
 EOF;
 
 $h->title = "Contact Us - All Natural Cleaning Company";
-$h->desc = "Contact Us at P.O.BOX 94358, Albuquerque, NM 87199. All Natural Cleaning Company. Toxin free Home and Commercial cleaning.";
+$h->desc = "Contact Us at 120 Madeira NE . Albuquerque , NM 87108. All Natural Cleaning Company. Toxin free Home and Commercial cleaning.";
 $h->banner = "<h1>Contact Us</h1>";
 
 list($top, $footer) = $S->getPageTopBottom($h, $b);
@@ -129,10 +129,10 @@ EOF;
 
 $hq = <<<EOF
 <b>All Natural Cleaning Company</b><br>
-P.O.BOX 94358,<br>
-Albuquerque, NM 87199<br>
+$S->__Address, $S->__City<br>
+$S->__State, $S->__Zip<br>
 Phone: $S->__Phone<br>
-Fax: (505)672-7081<br>
+Fax: $S->__Fax<br>
 Email: <a href="mailto:allnaturalcleaningcompany@gmail.com">allnaturalcleaningcompany@gmail.com</a>
 EOF;
 

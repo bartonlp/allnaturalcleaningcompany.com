@@ -65,7 +65,7 @@ EOF;
   exit();
 }
 
-$h->title = "Albuquerque, New Mexico - All Natural Cleaning Company";
+$h->title = "$S->__City, $S->__State - All Natural Cleaning Company";
 $h->desc = "All Natural Cleaning Company of Albuquerque. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 $h->css = <<<EOF
   <style>

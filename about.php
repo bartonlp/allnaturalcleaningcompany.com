@@ -3,7 +3,7 @@
 $_site = require_once(getenv("SITELOAD")."/siteload.php");
 $S = new $_site->className($_site);
 $h->title = "About Us - All Natural Cleaning Company";
-$h->desc = "All Natural Cleaning Company in Albuquerque. About Us. ".
+$h->desc = "All Natural Cleaning Company in $S->__City. About Us. ".
            "Cleaning service for home and business. We use only all natural products, no toxic chemicals. ".
            "Our products are 99% edable.";
 

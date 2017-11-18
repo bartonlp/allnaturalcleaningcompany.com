@@ -2,8 +2,12 @@
 // BLP 2016-01-09 -- check to see if this may be a robot
 // Google Analytics id: UA-80497078-1
 
-$this->__Phone = "(505)857-3709";
-// fax:  (505)672-7081
+$this->__Phone = "(505)399-9193";
+$this->__Fax = "(505)672-7081";
+$this->__Address = "120 Madeira NE";
+$this->__City = "Albuquerque";
+$this->__State = "New Mexico";
+$this->__Zip = "87108";
 
 $keywords = "All Natural Cleaning, Cleaning Services in Albuquerque NM, Home and Office Cleaning, ".
             "Chemical Free Cleaning in Albuquerque NM, Toxin Free Cleaning in Albuquerque NM, ".

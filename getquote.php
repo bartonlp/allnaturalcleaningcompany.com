@@ -52,7 +52,7 @@ pre {
 EOF;
 
 $h->script = <<<EOF
-  <script src="http://bartonphilliips.net/js/allnatural/js/maskedinput.js"></script>
+  <script src="https://bartonphillips.net/js/allnatural/js/maskedinput.js"></script>
   <script>
 jQuery(document).ready(function($) {
   $("main .phone").mask("999-999-9999? ext 9999");

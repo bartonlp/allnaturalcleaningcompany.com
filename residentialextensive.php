@@ -45,7 +45,7 @@ $top
 <h1 class="title">All Natural Cleaning Company Extensive Plan</h1>
 <h2>Residential Home Cleaning - Extensive plan<br>
 100% natural - chemical free</h2>
-<img id="image1" src="http://bartonphillips.net/images/allnatural/cleaning-service.png">
+<img id="image1" src="https://bartonphillips.net/images/allnatural/cleaning-service.png">
 <ul>
 <li>Cleaning toilets, vanities, sinks and backsplash</li>
 <li>Wipe and disinfect the Kitchen and bathroom cabinets</li>

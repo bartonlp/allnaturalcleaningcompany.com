@@ -36,7 +36,7 @@ echo <<<EOF
 $top
 <main>
 <h1 class="title">About us</h1>
-<img id="image1" src="http://bartonphillips.net/images/allnatural/AdobeStock_91295220-1.png" alt="Cleaning Services in Albuquerque, NM">
+<img id="image1" src="https://bartonphillips.net/images/allnatural/AdobeStock_91295220-1.png" alt="Cleaning Services in Albuquerque, NM">
 
 <p>The <b>All Natural Cleaning Company</b> is the first janitorial cleaning company in Albuquerque, New Mexico, and
 possibly the country, to use nothing but 100 percent natural cleaning products like white vinegar,

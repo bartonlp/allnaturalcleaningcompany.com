@@ -16,7 +16,7 @@ $h->css = <<<EOF
 }
 main {
         padding: 1rem;
-        background-image: url(http://bartonphillips.net/images/allnatural/AdobeStock_51734467.jpg);
+        background-image: url(https://bartonphillips.net/images/allnatural/AdobeStock_51734467.jpg);
         background-repeat: no-repeat;
         background-size: cover;
 }

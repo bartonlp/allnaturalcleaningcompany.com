@@ -248,7 +248,7 @@ $top
 
 <!-- position 1 -->
 <div class="border">
-<img  id="lemon" class="image" src="http://bartonphillips.net/images/allnatural/lemon.png" alt="Lemon Cleaner">
+<img  id="lemon" class="image" src="https://bartonphillips.net/images/allnatural/lemon.png" alt="Lemon Cleaner">
 <h3>Lemon Cleaner</h3>
 <h4>Great as a spray on kitchen counters, refrigerators and stoves. Not for windows or wood.</h4>
 
@@ -263,7 +263,7 @@ $top
 
 <!-- position 2 -->
 <div class="border">
-<img  id="oil" class="image" src="http://bartonphillips.net/images/allnatural/Oil.png" alt="Essential Oil Cleaner">
+<img  id="oil" class="image" src="https://bartonphillips.net/images/allnatural/Oil.png" alt="Essential Oil Cleaner">
 <h3>Essential Oil Cleaner</h3>
 <h4>For wood, counters, refrigerators and stoves. Just spray and wipe.</h4>
 
@@ -278,8 +278,8 @@ $top
 
 <!-- position 3 -->
 <div class="border">
-<img id="vinegar" class="image" src="http://bartonphillips.net/images/allnatural/vinegar.png" alt="Vinegar and Vodka Cleaner">
-<img class="image" src="http://bartonphillips.net/images/allnatural/vodka.png" alt="Vigegar and Vodka Cleaner">
+<img id="vinegar" class="image" src="https://bartonphillips.net/images/allnatural/vinegar.png" alt="Vinegar and Vodka Cleaner">
+<img class="image" src="https://bartonphillips.net/images/allnatural/vodka.png" alt="Vigegar and Vodka Cleaner">
 <h3>Vinegar and Vodka Cleaner</h3>
 <h4>General cleaning. Spray on conter tops, inside and outside of refrigerators, stoves, floors. Not for wood.</h4>
 
@@ -295,7 +295,7 @@ $top
 
 <!-- position 4 -->
 <div class="border">
-<img id="wipes1" class="image" src="http://bartonphillips.net/images/allnatural/wipes.png" alt="Disinfectant Wipes 1">
+<img id="wipes1" class="image" src="https://bartonphillips.net/images/allnatural/wipes.png" alt="Disinfectant Wipes 1">
 <h3>Disinfectent Wipes #1</h3>
 <h4>Great general purpous wip for just about anything.</h4>
 
@@ -313,7 +313,7 @@ germicide properties, while also giving the solution a pleasant scent.</p>
 
 <!-- position 5 -->
 <div class="border">
-<img id="wipes2" class="image" src="http://bartonphillips.net/images/allnatural/wipes.png" alt="Disinfectant Wipes 2">
+<img id="wipes2" class="image" src="https://bartonphillips.net/images/allnatural/wipes.png" alt="Disinfectant Wipes 2">
 <h3>Disinfectent Wipes #2</h3>
 <h4>Another general purpous wip. Great for quick cleanup.</h4>
 

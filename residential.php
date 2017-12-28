@@ -57,8 +57,8 @@ list($top, $footer) = $S->getPageTopBottom($h, $b);
 echo <<<EOF
 $top
 <main>
-<img id="image1" src="http://bartonphillips.net/images/allnatural/AdobeStock_100422682-2.jpg" alt="Cleaning Service">
-<img id="image2" src="http://bartonphillips.net/images/allnatural/AdobeStock_26146158-1.png" alt="100% Natural">
+<img id="image1" src="https://bartonphillips.net/images/allnatural/AdobeStock_100422682-2.jpg" alt="Cleaning Service">
+<img id="image2" src="https://bartonphillips.net/images/allnatural/AdobeStock_26146158-1.png" alt="100% Natural">
 <h1 class="title">All Natural Residential Cleaning</h1>
 <p><b>Dear Home Owner,</b></p>
 

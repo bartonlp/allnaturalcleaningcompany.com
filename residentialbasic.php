@@ -49,7 +49,7 @@ $top
 <h1 class="title">All Natural Cleaning Company Basic Plan</h1>
 <h2>Residential Home Cleaning - Basic plan<br>
 100% natural - chemical free</h2>
-<img id="image1" src="http://bartonphillips.net/images/allnatural/AdobeStock_40037375-3.png">
+<img id="image1" src="https://bartonphillips.net/images/allnatural/AdobeStock_40037375-3.png">
 <ul>
 <li>Cleaning the toilets, vanities, sinks and backsplash</li>
 <li>Cleaning bathtub, showers (including tile and glass)</li>

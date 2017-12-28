@@ -23,9 +23,9 @@ $structData = <<<EOF
   "@context": "http://schema.org/",
   "@type": "Service",
   "name": "All Natural Cleaning Company",
-  "image": "http://www.allnaturalcleaningcompany.com/images/logo-allnatural.png",
+  "image": "https://www.allnaturalcleaningcompany.com/images/logo-allnatural.png",
   "description": "All natural cleaning in Albuquerque. We provide cleaning with only natural products.",
-  "url": "http://www.allnaturalcleaningcompany.com",
+  "url": "https://www.allnaturalcleaningcompany.com",
   "serviceType": "Janitorial Services",
   "areaServed" : {
     "@type": "Place",
@@ -71,6 +71,8 @@ html {
   display: none;
 }
   </style>
+  <!-- css is not css but a link to tracker via .htaccess RewriteRule. -->
+  <link rel="stylesheet" href="/csstest.css?id=$this->LAST_ID" title="blp test">
   {$arg['link']}
 <!--
   <link rel="preload" href="https://bartonphillips.net/css/allnatural/allnatural.css" onload="this.rel='stylesheet'">
@@ -92,13 +94,14 @@ html {
   <script> var lastId = $this->LAST_ID; </script>
   <script src="https://bartonphillips.net/js/tracker.js"></script>
 <!--  <script src="https://bartonphillips.net/js/loadCSS.js"></script>
-  <script src="https://bartonphillips.net/js/cssrelpreload.js"></script> -->
+  <script src="https://bartonphillips.net/js/cssrelpreload.js"></script>
 
   <script>
 //loadCSS("https://bartonphillips.net/css/allnatural/allnatural.css");
 //loadCSS("https://bartonphillips.net/css/allnatural/social/css/font-awesome.css");
 //loadCSS("https://bartonphillips.net/css/allnatural/social/css/style.css");
   </script>
+-->
   <!-- Custom Scripts -->
 {$arg['extra']}
 {$arg['script']}

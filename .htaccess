@@ -43,6 +43,9 @@ RewriteRule ^Sitemap\.xml$ sitemap.php [L,NC]
 RewriteCond %{HTTP_USER_AGENT} "baiduspider" [NC]
 RewriteRule (.*) - [F,L]
 
+# rewrite the address of csstest.css to tracker.php?csstest
+RewriteRule ^csstest\.css(.*)(.*)$ tracker.php?$2&csstest [L,QSA]
+
 # Do compression of the followin types
 
 AddOutputFilterByType DEFLATE \

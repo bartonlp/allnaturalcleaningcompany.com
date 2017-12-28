@@ -49,7 +49,7 @@ $top
 <main>
 <h1 class="title">Commercial Janitorial Cleaning</h1>
 
-<img id="image1" src="http://bartonphillips.net/images/allnatural/women-img.png" alt="Cleaning Worman in Albuquerque NM">
+<img id="image1" src="https://bartonphillips.net/images/allnatural/women-img.png" alt="Cleaning Worman in Albuquerque NM">
 
 <p>The <b>All Natural Cleaning Company</b> uses only natural toxin free ingredients.
 An important question commercial customers never ask of their cleaning companies; what kind

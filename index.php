@@ -5,38 +5,6 @@ $S = new $_site->className($_site);
 $h->title = "Albuquerque, New Mexico - All Natural Cleaning Company";
 $h->desc = "All Natural Cleaning Company of Albuquerque. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 
-$h->script = <<<EOF
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org/",
-  "@type": "Recipe",
-  "author": "All Natural Cleaning Company",
-  "datePublished": "2016-07-25",
-  "name": "All purpose cleaner and deodorizer",
-  "image": "http://www.allnaturalcleaningcompany.com/images/AdobeStock_40037375-3.png",
-  "description": "<i>for:</i> Kitchen counters, appliances, inside the refrigerator",
-  "url": "http://www.allnaturalcleaningcompany.com",
-  "recipeIngredient": [
-    "4 tablespoons baking soda",
-    "1 quart warm water"
-  ],
-  "recipeInstructions": "Pour solution on a clean sponge and wipe. It is that simple.",
-  "prepTime": "PT5M",
-  "cookTime": "PT0M",
-  "recipeYield": "4 quarts",
-  "nutrition": {
-    "@type": "NutritionInformation",
-    "calories": "0"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "100"
-  }
-}
-</script>
-EOF;
-
 $h->css = <<<EOF
   <style>
 main img {
@@ -125,7 +93,7 @@ $top
   <h1>All Natural Cleaning Company</h1>
   <span class="toxinfree">100% Toxin Free<br>100% Natural</span><br>Call us $S->__Phone<br>
 <a href="getquote.php">Get a free quote</a></div>
-<img src="http://bartonphillips.net/images/allnatural/woman-left-croped.png" alt="All Natural Cleaning Company of Albuquerque: Woman with Cleaning Equipment">
+<img src="https://bartonphillips.net/images/allnatural/woman-left-croped.png" alt="All Natural Cleaning Company of Albuquerque: Woman with Cleaning Equipment">
 
 <div class="content">
 <p>The <b>All Natural Cleaning Company</b> is the first company in Albuquerque, New Mexico, to use 100%
@@ -153,7 +121,7 @@ tailored to each cleaning task. 99% of the products we use are ingestible.</p>
 <p>Here is an example of one cleaning formula:</p>
 <p>All purpose cleaner and deodorizer <i>for:</i> Kitchen counters, appliances, inside the refrigerator</p>
 
-<img class="image2" src="http://bartonphillips.net/images/allnatural/AdobeStock_40037375-3.png" alt="100% natural">
+<img class="image2" src="https://bartonphillips.net/images/allnatural/AdobeStock_40037375-3.png" alt="100% natural">
 <p><i>Ingredients</i></p>
 
 <ul>

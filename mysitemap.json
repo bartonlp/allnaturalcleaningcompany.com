@@ -18,6 +18,6 @@
     "bannerFile": "includes/banner.i.php",
     "footerFile": "includes/footer.i.php",
     "count": true,
-    "countMe": true,
+    "countMe": false,
     "myUri": "bartonphillips.dyndns.org"
 }

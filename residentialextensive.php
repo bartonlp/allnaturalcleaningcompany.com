@@ -1,6 +1,6 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 $h->title = "Home Cleaning Extensive Plan - All Natural Cleaning Company";

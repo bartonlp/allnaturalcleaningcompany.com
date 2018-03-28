@@ -1,6 +1,6 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$_site = require_once(getenv("SITELOADNAME"));
 //ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 $h->link = <<<EOF
@@ -107,7 +107,7 @@ subject: $subject\n
 message: $message\n
 EOF;
 
-   mail(EMAILADDRESS, "$subject", "$info", "From: allnatural@allnaturalcleaningcompany.com");
+   mail($S->EMAILADDRESS, "$subject", "$info", "From: allnatural@allnaturalcleaningcompany.com");
   
   // The Submit page
 

@@ -1,6 +1,6 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 if($_POST['submit']) {
@@ -52,7 +52,7 @@ $r
 Ref Phone
 $rphone
 EOF;
-//  mail(EMAILADDRESS, "Employment Request", $msg, "From: allnatural@allnaturalcleaningcompany.com");
+  mail($S->EMAILADDRESS, "Employment Request", $msg, "From: allnatural@allnaturalcleaningcompany.com");
   list($top, $footer) = $S->getPageTopBottom($h);
 
   echo <<<EOF

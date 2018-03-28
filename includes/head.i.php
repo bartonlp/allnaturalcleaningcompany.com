@@ -1,7 +1,4 @@
 <?php
-// BLP 2016-01-09 -- check to see if this may be a robot
-// Google Analytics id: UA-80497078-1
-
 $this->__Phone = "(505)399-9193";
 $this->__Fax = "(505)672-7081";
 $this->__Address = "120 Madeira NE";
@@ -56,15 +53,16 @@ return <<<EOF
   <meta charset='utf-8'/>
   <meta name="copyright" content="$this->copyright">
   <meta name="Author" content="$this->author"/>
-  <!-- All Natural Cleaning Company, Albuquerque NM. Home and office cleaning with natural, toxin free products. -->
+  <!--
+    All Natural Cleaning Company, Albuquerque NM.
+    Home and office cleaning with natural, toxin free products.
+  -->
   <meta name="description" content="{$arg['desc']}"/>
   <meta name="keywords" content="$keywords"/>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="vBqb7BadCBGAHjG87iKhlKuzIDgauuxWa2lLP_p8UEE" />
   <!-- Structured Data -->
   $structData
-  <!-- ICONS, RSS -->
-  <!--<link rel="shortcut icon" href="favicon.ico" />-->
   <!-- CSS -->
   <style>
 html {
@@ -74,34 +72,11 @@ html {
   <!-- css is not css but a link to tracker via .htaccess RewriteRule. -->
   <link rel="stylesheet" href="/csstest.css?id=$this->LAST_ID" title="blp test">
   {$arg['link']}
-<!--
-  <link rel="preload" href="https://bartonphillips.net/css/allnatural/allnatural.css" onload="this.rel='stylesheet'">
-
-  <link rel="preload" href="https://bartonphillips.net/css/allnatural/social/css/font-awesome.css" onload="this.rel='stylesheet'">
-  <link rel="preload" href="https://bartonphillips.net/css/allnatural/social/css/style.css" onload="this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
-    <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/font-awesome.css">
-    <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/style.css">
-  </noscript>
--->
   <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
-  <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/font-awesome.css">
-  <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/social/css/style.css">
-
   <!-- jQuery and Javascripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script> var lastId = $this->LAST_ID; </script>
   <script src="https://bartonphillips.net/js/tracker.js"></script>
-<!--  <script src="https://bartonphillips.net/js/loadCSS.js"></script>
-  <script src="https://bartonphillips.net/js/cssrelpreload.js"></script>
-
-  <script>
-//loadCSS("https://bartonphillips.net/css/allnatural/allnatural.css");
-//loadCSS("https://bartonphillips.net/css/allnatural/social/css/font-awesome.css");
-//loadCSS("https://bartonphillips.net/css/allnatural/social/css/style.css");
-  </script>
--->
   <!-- Custom Scripts -->
 {$arg['extra']}
 {$arg['script']}

@@ -1,6 +1,6 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$_site = require_once(getenv("SITELOADNAME"));
 //ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
@@ -80,7 +80,7 @@ if($_POST) {
   $sql = "insert into getquote ($keys) values($values)";
 
    $S->query($sql);
-   mail(EMAILADDRESS, "Get Quote", $info, "From: info@allnaturalcleaningcompany.com");
+   mail($S->EMAILADDRESS, "Get Quote", $info, "From: info@allnaturalcleaningcompany.com");
   echo <<<EOF
 $top
 <main>

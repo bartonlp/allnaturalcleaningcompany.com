@@ -1,6 +1,6 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 $h->title = "Home Cleaning Plans - All Natural Cleaning Company";
 $h->desc = "Home Cleaning with all natural products. Residential cleaning in Albuquerque. No toxins or harmfull chemicals.";

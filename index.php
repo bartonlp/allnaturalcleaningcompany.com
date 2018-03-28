@@ -1,7 +1,8 @@
 <?php
 //$AutoLoadDEBUG = 1;
-$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
+
 $h->title = "Albuquerque, New Mexico - All Natural Cleaning Company";
 $h->desc = "All Natural Cleaning Company of Albuquerque. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 
@@ -11,8 +12,8 @@ main img {
   width: 100%;
 }
 main {
-        position: relative;
-        padding: .5%;
+  position: relative;
+  padding: .5%;
 }
 h1 {
   font-size: 100%;
@@ -23,61 +24,61 @@ h1 {
   text-align: center;
 }
 .callus {
-        position: absolute;
-        top: 6%;
-        right: 10%;
-        font-size: 200%;
-        color: red;
-        text-align: center;
-        font-weight: bold;
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  font-size: 200%;
+  color: red;
+  text-align: center;
+  font-weight: bold;
 }
 .toxinfree {
-        color: blue;
+  color: blue;
 }
 .content {
-        padding-top: .1%;
-        padding-left: 1%;
+  padding-top: .1%;
+  padding-left: 1%;
 }
 .phone {
-        color: red;
+  color: red;
 }
 .getquote {
-        display: inline-block;
-        padding: 1rem;
-        margin-left: 2rem;
-        margin-bottom: 1rem;
-        background-color: lightblue;
-        border: 1px solid black;
-        border-radius: .5rem;
-        text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: .5rem;
+  text-decoration: none;
 }
 .image2 {
-       float: left;
-       width: 10rem;
+  float: left;
+  width: 10rem;
 }
 .clearboth {
-       clear: both;
+  clear: both;
 }
 .followus {
-  width: 200px;
+  width: 200px; /* should be rem */
 }
 @media (max-width: 1000px) {
-       .callus {
-          top: 3%;
-          right: 5%;
-          font-size: 150%;
-       }
+  .callus {
+    top: 3%;
+    right: 5%;
+    font-size: 150%;
+  }
 }
 @media (max-width: 550px) {
-       main button.emailus, main button.makeappointment {
-         padding: .5rem;
-         margin-left: 1.5rem;
-       }
-       .callus {
-          top: 2%;
-          right: 5%;
-          font-size: 100%;
-       }
+  main button.emailus, main button.makeappointment {
+    padding: .5rem;
+    margin-left: 1.5rem;
+  }
+  .callus {
+    top: 2%;
+    right: 5%;
+    font-size: 100%;
+  }
 }
   </style>
 EOF;
@@ -88,7 +89,6 @@ echo <<<EOF
 $top
 <main>
 <!-- All Natural Cleaning Company, Albuquerque NM. Toxin Free, Chemical Free, All natural and Organic. Home and Office Cleaning. -->
-
 <div class="callus">
   <h1>All Natural Cleaning Company</h1>
   <span class="toxinfree">100% Toxin Free<br>100% Natural</span><br>Call us $S->__Phone<br>

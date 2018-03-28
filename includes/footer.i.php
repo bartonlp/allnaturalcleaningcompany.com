@@ -1,5 +1,7 @@
 <?php
 // Footer file
+
+// $google not used
 $google =<<<EOF
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -11,6 +13,20 @@ $google =<<<EOF
   ga('send', 'pageview');
 
 </script>
+EOF;
+
+// $hubspot not used
+$hubspot = <<<EOF
+<!-- Start of Async HubSpot Analytics Code -->
+  <script>
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2461465.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 EOF;
 
 $statcounter = <<<EOF
@@ -34,19 +50,6 @@ counter"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
 EOF;
 
-$hubspot = <<<EOF
-<!-- Start of Async HubSpot Analytics Code -->
-  <script>
-    (function(d,s,i,r) {
-      if (d.getElementById(i)){return;}
-      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2461465.js';
-      e.parentNode.insertBefore(n, e);
-    })(document,"script","hs-analytics",300000);
-  </script>
-<!-- End of Async HubSpot Analytics Code -->
-EOF;
-
 // Render the Footer
 
 $lastmod = date("M j, Y H:i", getlastmod());
@@ -62,25 +65,36 @@ return <<<EOF
 }
 </style>
 
+<!--
+  This div has the 'twitter', 'facebook' and 'g+' icons and links.
+  It uses "FontAwesome" from the "https://bartonphillips.net/css/allnatural/social/font/"
+  directory. FontAwesome has gliphs for the social media companies.
+-->
 <div class="social">
-<!-- fb.me/allnaturalcleaningcompany -->
-<span itemscope itemtype="http://schema.org/Organization">
-  <link itemprop="url" href="http://www.allnaturalcleaningcompany.com">
-    <a itemprop="sameAs" href="http://twitter.com/minimalmonkey" class="icon-button twitter">
-      <i class="icon-twitter"></i>
-      <span></span>
-    </a>
-    <a itemprop="sameAs" href="https://www.facebook.com/allnaturalcleaningcompany/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
-    <a href="http://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
-</span>  
+  <a href="http://twitter.com" class="icon-button twitter">
+    <i class="icon-twitter"></i>
+    <span></span>
+  </a>
+  <a href="https://www.facebook.com/allnaturalcleaningcompany/"
+    class="icon-button facebook">
+    <i class="icon-facebook"></i>
+    <span></span>
+  </a>
+  <a href="http://plus.google.com" class="icon-button google-plus">
+    <i class="icon-google-plus"></i>
+    <span></span>
+  </a>
 </div>
-
+<!--
+  Normal footer
+-->
 <footer>
 <address>
   Copyright &copy; $this->copyright<br>
   Last Modified: $lastmod
 </address>
 </footer>
+{$arg['script']}
 $statcounter
 </body>
 </html>

@@ -1,0 +1,232 @@
+extends layout.pug
+
+block style
+  style.
+    main {
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+    }
+    #personel, #history, #available, #references {
+      background-color: white;
+      border: 1px solid black;
+      width: 98%;
+      margin-left: 2%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: .3rem;
+    }
+    input {
+      width: 100%;
+      border: none;
+    }
+    input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    input[type='radio'] {
+      width: .7rem;
+      height: .7rem;
+      vertical-align: middle;
+    }
+    input[type='submit'] {
+      border-radius: .5rem;
+      width: 5rem;
+      margin: 2rem;
+      padding: .5rem;
+      background-color: green;
+      color: white;
+    }
+    .dblshift td {
+      font-size: .8rem;
+    }
+    h1 {
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      main {
+        display: block;
+      }
+    }
+
+block content
+  h1 Employment Application
+  main
+    form(action="/employmentpost" method="post")
+      table#personel
+        thead
+          tr
+            th Personal Information
+        tbody
+          tr
+            td
+              input(type='text' name='name' placeholder="Enter Full Name (required)" required autofocus)
+          tr
+            td
+              input(type='email' name='email' placeholder="Email Address (required)" required)
+          tr
+            td
+              input(type='text' name='address' placeholder="Address, City, State and zipcode")
+          tr
+            td
+              input(type='tel' name='phone' pattern="(\(\d{3}\)\d{3}-\d{4})|(\d{10})" placeholder="Primary phone number (required)" required title="Phone format (999)999-9999 or 999999999")
+          tr
+            td Are you legally allowed to work in the United States
+              br
+              label(for="ck1") YES
+              input#ck1(type='radio' name='legal' value='yes' required) 
+              label(for="ck2") NO
+              input#ck2(type='radio' name='legal' value='no' required)
+
+          tr
+            td When can you start working (required) 
+              input(type='text' class='date' name='start' required)
+      br
+
+      table#history
+        thead
+          tr
+            th(colspan=3) Employment Information
+        tbody
+          tr
+            td
+              input(type='text' name='company[]' placeholder="Company you worked for")
+            td
+              input(type='text' class='date' name='from[]' placeholder="From: mm/dd/yyyy")
+            td
+              input(type='text' class='date' name='to[]' placeholder="To: mm/dd/yyyy")
+          tr
+            td
+              input(type='tel' name='contactphone[]' placeholder="Company phone")
+            td
+              input(type='text' name='jobtitle[]' placeholder="Job title")
+            td
+              input(type='text' name='supername[]' placeholder="Supervisors Name")
+          tr
+            td(colspan=3)
+          tr
+            td
+              input(type='text' name='company[]' placeholder="Company you worked for")
+            td
+              input(type='text' class='date' name='from[]' placeholder="From: mm/dd/yyyy")
+            td
+              input(type='text' class='date' name='to[]' placeholder="To: mm/dd/yyyy")
+          tr
+            td
+              input(type='tel' name='contactphone[]' placeholder="Company phone")
+            td
+              input(type='text' name='jobtitle[]' placeholder="Job title")
+            td
+              input(type='text' name='supername[]' placeholder="Supervisors Name")
+      br
+
+      table#available
+        thead
+          tr
+            th(colspan=8) Shift Availability
+        tbody
+          tr
+            td
+            th Monday
+            th Tuesday
+            th Wednesday
+            th Thursday
+            th Friday
+            th Saturday
+            th Sunday
+          tr
+            th From
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+            tr
+              th Till
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+              td
+                input(type='text' name='av-from[]' placeholder="hh:mm am/pm")
+
+            tr#dblshift
+              th Double Shift
+                td Yes:
+                  input(type="radio" name='dbl[0]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[0]' value="no")
+                td Yes:
+                  input(type="radio" name='dbl[1]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[1]' value="no")
+                td Yes:
+                  input(type="radio" name='dbl[2]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[2]' value="no")
+                td Yes:
+                  input(type="radio" name='dbl[3]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[3]' value="no")
+                td Yes:
+                  input(type="radio" name='dbl[4]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[4]' value="no")
+                td Yes:
+                  input(type="radio" name='dbl[5]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[5]' value="no")
+                td Yes:
+                  input(type="radio" name='dbl[6]' value="yes")
+                  | No:
+                  input(type="radio" name='dbl[6]' value="no")
+
+      br
+
+      table#references
+        thead
+          tr
+            th(colspan=2) References
+        tbody
+          tr
+            td
+              input(type='text' name='ref[]' placeholder="Name")
+            td
+              input(type='tel' name='refphone[]' placeholder="Phone")
+          tr
+            td
+              input(type='text' name='ref[]' placeholder="Name")
+            td
+              input(type='tel' name='refphone[]' placeholder="Phone")
+          tr
+            td
+              input(type='text' name='ref[]' placeholder="Name")
+            td
+              input(type='tel' name='refphone[]' placeholder="Phone")
+          tr
+            td
+              input(type='text' name='ref[]' placeholder="Name")
+            td
+              input(type='tel' name='refphone[]' placeholder="Phone")
+
+      input(type='submit' name="submit" value="Submit")
+
+

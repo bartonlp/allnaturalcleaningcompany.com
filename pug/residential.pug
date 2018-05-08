@@ -1,0 +1,90 @@
+extends layout.pug
+
+block link
+
+block style
+  style.
+    main {
+      padding: .5rem;
+    }
+    .title {
+      font-family: 'Tangerine', serif;
+      text-align: center;
+    }
+    #image1 {
+      float: left;
+      width: 12rem;
+      margin-right: 1rem;
+    }
+    #image2 {
+      float: right;
+      width: 12rem;
+    }
+    .li-space {
+      margin-bottom: .5rem;
+    }
+    div.flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .callusnow {
+      display: inline-block;
+      padding: 1rem;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+      background-color: lightblue;
+      border: 1px solid black;
+      border-radius: .5rem;
+      text-decoration: none;
+    }
+    @media (max-width: 760px) {
+      #image2 {
+        display: none;
+      }
+    }
+
+block content
+  main
+    img#image1(src="https://bartonphillips.net/images/allnatural/AdobeStock_100422682-2.jpg" alt="Cleaning Service")
+    img#image2(src="https://bartonphillips.net/images/allnatural/AdobeStock_26146158-1.png" alt="100% Natural")
+    h1.title All Natural Residential Cleaning
+    p
+      bDear Home Owner,
+
+    p
+      b The All Natural Cleaning Company 
+      | is the first janitorial company in Albuquerque New Mexico, and possibly in 
+      the country, to use all natural nontoxic chemical free cleaning solutions to clean your house.
+
+    p What do we mean by natural? We mean things that you use around your house, in your food pantry, 
+      things in your refrigerator, in your garden, things that you eat and use on a daily basis.  
+      Like lemon juice, sea salt, Baking soda, vinegar, olive oil, coconut oil, Castle soap, 
+      Hydrogen peroxide. Most of our ingredients are edible.
+
+    p We do not use any &quot;Green products&quot;; they contain toxins and harmful chemicals. 
+      Simply Google the content of these &quot;green&quot; products and their side effects you
+      will understand what we mean. 
+      Keep in mind these products are produced by chemical companies. 
+      Our products are produced by farmers and are made from such things as lemon and olive oil.
+
+    p After our initial home cleaning visit to your home we will take notes and put together 
+      special cleaning formulas unique to the characteristics of your home. 
+      Each home cleaning is different and requires a lot of attention 
+      to detail before we start the cleaning process.
+
+    p If you were to schedule a home cleaning with us here is what we will do for you:
+
+    ol
+      li.li-space We will clean your house.
+      li.li-space Teach you how to make your own natural cleaning mixes.
+      li.li-space  Show you how to eliminate the toxins from your home.
+      li.li-space If you are willing to gather your friends and neighbors at your house we would love to 
+      speak to them free and teach them how to eliminate the toxins from their homes too.
+
+    p We currently offer two home residential cleaning plans:
+      a.callusnow(href="/residentialbasic") Basic Plan 
+      a.callusnow(href="/residentialextensive") Extensive Plan
+    p
+      a(href="/getquote") Get a Quote 
+      | or 
+      a(href="/contact") call us for a quote

@@ -5,9 +5,7 @@ return <<<EOF
 <img src="https://bartonphillips.net/images/allnatural/BubbleLogo.png" alt="bubble-logo">
 <img id="logo" src="https://bartonphillips.net/images/blank.png" alt="blank image">
 <img id='dummyimg' src='/tracker.php?page=normal&id=$this->LAST_ID' alt="blank image">
-<div>
-All Natural Cleaning Company
-  <span class="phone">Call Us Today: $this->__Phone</span>
+<div>All Natural Cleaning Company <span class="phone">Call Us Today: $this->__Phone</span>
 
 <!-- Nav bar for large screens -->
   <ul>

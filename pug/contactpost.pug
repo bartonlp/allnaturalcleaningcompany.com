@@ -1,0 +1,13 @@
+extends layout.pug
+
+block style
+  style.
+    main {
+      padding: 0 .5rem;
+    }
+
+block content
+  main
+    h1 Thank You for your email
+    pre #{info.info}
+    a(href="/index") Return to home page

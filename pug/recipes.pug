@@ -1,0 +1,112 @@
+extends layout.pug
+
+block style
+  style.
+    h3 {
+      font-size: 1.17rem;
+      display: inline-block;
+      vertical-align: top;
+    }
+    h4 {
+      font-size: 1rem;
+      font-style: italic;
+      margin: 0;
+    }
+    .title {
+      font-family: 'Tangerine', serif;
+      text-align: center;
+    }
+    main {
+      padding: .5rem;
+    }
+    #image1 {
+      width: 15rem;
+      float: left;
+    }
+    .image {
+      display: inline-block;
+      height: 100px;
+      margin-right: 20px;
+    }
+    .clearboth {
+      clear: both;
+    }
+    .border {
+      border: 1px solid black;
+      padding: .5rem;
+    }
+
+block content
+
+  main
+    h1.title Safe Cleaning Recipes:
+    // position 1
+    div.border
+      img#lemon(class="image" src="https://bartonphillips.net/images/allnatural/lemon.png" alt="Lemon Cleaner")
+      h3 Lemon Cleaner
+      h4 Great as a spray on kitchen counters, refrigerators and stoves. Not for windows or wood.
+      ul
+        li 2 cups water
+        li 2 tablespoons fresh squezed lemon juce
+        li  1/2 teaspoon Dr. Bronner's Castile soap
+        li 1 tablespoon baking soda
+      p Pour into a 24 oz. spray bottle and shake well.
+
+    // position 2 
+    div.border
+      img#oil(class="image" src="https://bartonphillips.net/images/allnatural/Oil.png" alt="Essential Oil Cleaner")
+      h3 Essential Oil Cleaner
+      h4 For wood, counters, refrigerators and stoves. Just spray and wipe.
+      ul
+        li 3/4 cup water
+        li 1/4 cup rubbing alcohol
+        li 5-10 drops peppermint, lemon or orange essential oil
+        li 1 squirt natural dish soap
+
+      pPour all the ingrediants into a 16 oz. spray bottle and shake well.
+
+    // position 3 
+    div.border
+      img#vinegar(class="image" src="https://bartonphillips.net/images/allnatural/vinegar.png" alt="Vinegar and Vodka Cleaner")
+      img.image(src="https://bartonphillips.net/images/allnatural/vodka.png" alt="Vigegar and Vodka Cleaner")
+      h3 Vinegar and Vodka Cleaner
+      h4 General cleaning. Spray on conter tops, inside and outside of refrigerators, stoves, floors. Not for wood.
+      ul
+        li 1/2 cup vinegar
+        li 1/2 cup vodka (wait until you are finished cleaning to drink the rest)
+        li 10 drops lavender oil
+        li 10 drops lemon oil
+        li 1 1/2 cups water
+
+      p Pour ingrediants into t 24 oz. spray bottle and shake well. Not for wood.
+
+    // position 4
+    div.border
+      img#wipes1(class="image" src="https://bartonphillips.net/images/allnatural/wipes.png" alt="Disinfectant Wipes 1")
+      h3 Disinfectent Wipes #1
+      h4 Great general purpous wip for just about anything.
+      ul
+        li 2 cup water
+        li 1/24 cup white vinegar
+        li 8-10 drops lemon essential oil
+        li 8-10 drops eucalyptus essential oil
+        li 5-7 drops tea tree essential oil
+
+      p.
+        The vinegar has disinfecting properties and the essential oils provide anti-bacterial and natural 
+        germicide properties, while also giving the solution a pleasant scent.
+
+    // position 5 
+    div.border
+      img#wipes2(class="image" src="https://bartonphillips.net/images/allnatural/wipes.png" alt="Disinfectant Wipes 2")
+      h3 Disinfectent Wipes #2
+      h4 Another general purpous wip. Great for quick cleanup.
+      ul
+        li 2 cup water
+        li 4 Tbsp Castile Soap
+        li 16-20 drops tea tree essential oil
+
+      p.
+        This is basically my multipurpose cleaner for using with the wipes. The tea tree oil has 
+        anti-bacterial properties and the castile soap provides the cleaning power. You can find both 
+        castile soap and tea tree oil at Target, but I have found the best prices online.

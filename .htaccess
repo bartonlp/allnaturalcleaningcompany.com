@@ -44,7 +44,14 @@ RewriteCond %{HTTP_USER_AGENT} "baiduspider" [NC]
 RewriteRule (.*) - [F,L]
 
 # rewrite the address of csstest.css to tracker.php?csstest
-RewriteRule ^csstest\.css(.*)(.*)$ tracker.php?$2&csstest [L,QSA]
+RewriteRule ^csstest-(.*)\.css$ tracker.php?id=$1&csstest [L,QSA]
+
+# for / do altoroute.php
+RewriteRule ^$ altoroute.php [L]
+# for anything that is not a real file or a real directory do altorout.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME] !-d
+RewriteRule . altoroute.php [L]
 
 # Do compression of the followin types
 

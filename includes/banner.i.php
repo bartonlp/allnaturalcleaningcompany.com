@@ -1,4 +1,6 @@
 <?php
+// BLP 2018-06-21 -- NOTE we are using PUG and this is ONLY used if the xxx.php is the url!
+//  See the pug/layout.pug!
 
 return <<<EOF
 <header id="header">

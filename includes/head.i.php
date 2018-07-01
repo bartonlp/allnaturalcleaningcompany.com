@@ -1,4 +1,7 @@
 <?php
+// BLP 2018-06-21 -- NOTE we are using PUG and this is ONLY used if the xxx.php is the url!
+//  See the pug/layout.pug!
+
 $this->__Phone = "(505)399-9193";
 $this->__Fax = "(505)672-7081";
 $this->__Address = "120 Madeira NE";

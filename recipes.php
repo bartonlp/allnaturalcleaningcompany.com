@@ -3,7 +3,7 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 $h->title = "Safe Cleanig Recipes - All Natural Cleaning Company";
-$h->desc = "Safe Cleaning Recipes. All Natural Cleaning in Albuquerque. ".
+$h->desc = "Safe Cleaning Recipes. All Natural Cleaning. ".
            "Cleaning service for home and business. We use only all natural products, no toxic chemicals. ".
            "Our products are 99% edable.";
 

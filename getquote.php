@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 EOF;
 
 $h->title = "Get A Quote - All Natural Cleaning Company";
-$h->desc = "Get a Quote for Home or Commercial cleaning in Albuquerque. Cheamical free cleaning. Residential and Commercial cleaning.";
+$h->desc = "Get a Quote for Home or Commercial cleaning. Cheamical free cleaning. Residential and Commercial cleaning.";
 
 list($top, $footer) = $S->getPageTopBottom($h, $b);
 

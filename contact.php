@@ -84,7 +84,7 @@ pre {
 EOF;
 
 $h->title = "Contact Us - All Natural Cleaning Company";
-$h->desc = "Contact Us at 120 Madeira NE . Albuquerque , NM 87108. All Natural Cleaning Company. Toxin free Home and Commercial cleaning.";
+$h->desc = "Contact Us at allnatural@allnaturalcleaningcompany.com. All Natural Cleaning Company. Toxin free Home and Commercial cleaning.";
 $h->banner = "<h1>Contact Us</h1>";
 
 list($top, $footer) = $S->getPageTopBottom($h, $b);
@@ -100,15 +100,15 @@ if(isset($_POST['submit'])) {
             "values('$S->siteName', '$email', '$name', '$subject', '$message', now())");
 
   $info = <<<EOF
-site: $S->siteName\n
-email: $email\n
-name: $name\n
-subject: $subject\n
-message: $message\n
+site: $S->siteName
+email: $email
+name: $name
+subject: $subject
+message: $message
 EOF;
 
-   mail($S->EMAILADDRESS, "$subject", "$info", "From: allnatural@allnaturalcleaningcompany.com");
-  
+  mail($S->EMAILADDRESS, "$subject", "$info", "From: allnatural@allnaturalcleaningcompany.com");
+  mail('bartonphillips@gmail.com', "TEST: $subject", "$info");
   // The Submit page
 
   echo <<<EOF
@@ -129,10 +129,6 @@ EOF;
 
 $hq = <<<EOF
 <b>All Natural Cleaning Company</b><br>
-$S->__Address, $S->__City<br>
-$S->__State, $S->__Zip<br>
-Phone: $S->__Phone<br>
-Fax: $S->__Fax<br>
 Email: <a href="mailto:allnaturalcleaningcompany@gmail.com">allnaturalcleaningcompany@gmail.com</a>
 EOF;
 
@@ -145,7 +141,7 @@ $appointment = '';
 
 $phones = <<<EOF
 <div>
-  <p>Mailing Address<br>
+  <p>Email Address<br>
 $hq</p>
 </div>
 EOF;

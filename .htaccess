@@ -1,3 +1,4 @@
+# BLP 2019-10-29 -- NOT USING PUG
 Header set Access-Control-Allow-Origin "*"
 
 order allow,deny
@@ -5,9 +6,9 @@ allow from all
 SetEnv SITELOAD /var/www/vendor/bartonlp/site-class/includes
 SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
 
-Header unset Pragma
-FileETag None
-Header unset ETag
+#Header unset Pragma
+#FileETag None
+#Header unset ETag
  
 # BEGIN EXPIRES
 <IfModule mod_expires.c>
@@ -46,12 +47,13 @@ RewriteRule (.*) - [F,L]
 # rewrite the address of csstest.css to tracker.php?csstest
 RewriteRule ^csstest-(.*)\.css$ tracker.php?id=$1&csstest [L,QSA]
 
+## BLP 2019-10-29 -- we are not using pug any more.
 # for / do altoroute.php
-RewriteRule ^$ altoroute.php [L]
+#RewriteRule ^$ altoroute.php [L]
 # for anything that is not a real file or a real directory do altorout.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME] !-d
-RewriteRule . altoroute.php [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME] !-d
+#RewriteRule . altoroute.php [L]
 
 # Do compression of the followin types
 
@@ -86,4 +88,3 @@ AddOutputFilterByType DEFLATE \
   "image/png" \
   "image/jpg" \
   "image/gif" 
-

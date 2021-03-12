@@ -3,7 +3,7 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 $h->title = "About Us - All Natural Cleaning Company";
-$h->desc = "All Natural Cleaning Company in $S->__City. About Us. ".
+$h->desc = "All Natural Cleaning Company. About Us. ".
            "Cleaning service for home and business. We use only all natural products, no toxic chemicals. ".
            "Our products are 99% edable.";
 
@@ -38,8 +38,7 @@ $top
 <h1 class="title">About us</h1>
 <img id="image1" src="https://bartonphillips.net/images/allnatural/AdobeStock_91295220-1.png" alt="Cleaning Services in Albuquerque, NM">
 
-<p>The <b>All Natural Cleaning Company</b> is the first janitorial cleaning company in Albuquerque, New Mexico, and
-possibly the country, to use nothing but 100 percent natural cleaning products like white vinegar,
+<p>The <b>All Natural Cleaning Company</b> is the first janitorial cleaning company to use nothing but 100 percent natural cleaning products like white vinegar,
 baking soda, lemon, corn starch, hydrogen peroxide, flour, Isopropyl Alcohol, Lavender oil and many
 other naturally occurring products.</p>
 
@@ -48,7 +47,7 @@ products that we are familiar with. The majority of our products are 100
 percent edible.</p>
 
 <p>At the <b>All Natural Cleaning Company</b> we are trend setters.
-We are locally owned and operated right here in Albuquerque, New Mexico. We are ready to make a
+We are locally owned and operated. We are ready to make a
 positive difference in people's lives. After we clean your home or office
 we will educate you on natural cleaning and show you how to do it
 yourself next time. We will also help you get rid of all the toxins stored

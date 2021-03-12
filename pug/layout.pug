@@ -1,15 +1,17 @@
 //- This is the extends head
-
+//- We do not pickup the entire $top but rather parse items from it which where placed into 'info'
+//- This may not have been the best idea. The parsing is done in ../altoroute.php
 -
-  info.__Phone = "(505)399-9193"
+  info.__Phone = "(407)779-1777"
   info.__Fax = "(505)672-7081"
-  info.__Address = "120 Madeira NE"
-  info.__City = "Albuquerque"
-  info.__State = "New Mexico"
-  info.__Zip = "87108"
+  info.__Address = ""
+  info.__City = ""
+  info.__State = ""
+  info.__Zip = ""
 
 doctype html
-html(lang='en')
+//- prefix for og
+html(lang='en' prefix="og: http://ogp.me/ns#")
   head
     //- if info.title is set use it else use the indo.desc as the title
     if info.title
@@ -26,6 +28,15 @@ html(lang='en')
     meta(name="Author" content=info.author)
     meta(name="description" content=info.desc)
     meta(name="keywords" content=info.keywords)
+
+    // Add Open Graph meta tags
+    meta(property="og:title" content="All Natural Cleaning Company")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://www.allnaturalcleaningcompany.com")
+    meta(property="og:image" content="https://bartonphillips.net/images/allnatural/woman-left-croped.png")
+
+    // Add canonical link because we have multiple urls pointing here
+    link(rel="canonical" href="https://www.allnaturalcleaningcompany.com")
 
     // Google Fonts 
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine")
@@ -52,6 +63,23 @@ html(lang='en')
       }
       .icon-button {
         font-size: 1.5em;
+      }
+    
+    //- Structured data
+    script(type="application/ld+json").
+      {
+        "@context": "http://schema.org/",
+        "@type": "Service",
+        "name": "All Natural Cleaning Company",
+        "image": "https://www.allnaturalcleaningcompany.com/images/logo-allnatural.png",
+        "description": "All natural cleaning. We provide cleaning with only natural products.",
+        "url": "https://www.allnaturalcleaningcompany.com",
+        "serviceType": "Janitorial Services",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "reviewCount": "89"
+        }
       }
 
     //- Extra styles go here
@@ -140,7 +168,7 @@ html(lang='en')
       | Last Modified: #{lastmod}
 
   // Global site tag (gtag.js) - Google Analytics
-  script(async src="https://www.googletagmanager.comgtag/js?id=UA-121110438-1")
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-121110438-1")
   script.
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}

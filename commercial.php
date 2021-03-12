@@ -3,7 +3,7 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 $h->title = "Commercial Janitorial Service - All Natural Cleaning Company";
-$h->desc = "Comercial Janitorial service in Albuquerque. All Natural products, no harmfull chemicals or toxins.";
+$h->desc = "Comercial Janitorial service. All Natural products, no harmfull chemicals or toxins.";
 
 $h->link = <<<EOF
   <!-- Google Fonts -->
@@ -49,7 +49,7 @@ $top
 <main>
 <h1 class="title">Commercial Janitorial Cleaning</h1>
 
-<img id="image1" src="https://bartonphillips.net/images/allnatural/women-img.png" alt="Cleaning Worman in Albuquerque NM">
+<img id="image1" src="https://bartonphillips.net/images/allnatural/women-img.png" alt="Cleaning Worman">
 
 <p>The <b>All Natural Cleaning Company</b> uses only natural toxin free ingredients.
 An important question commercial customers never ask of their cleaning companies; what kind

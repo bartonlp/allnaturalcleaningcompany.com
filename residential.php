@@ -3,7 +3,7 @@
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 $h->title = "Home Cleaning Plans - All Natural Cleaning Company";
-$h->desc = "Home Cleaning with all natural products. Residential cleaning in Albuquerque. No toxins or harmfull chemicals.";
+$h->desc = "Home Cleaning with all natural products. Residential cleaning. No toxins or harmfull chemicals.";
 $h->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
@@ -62,7 +62,7 @@ $top
 <h1 class="title">All Natural Residential Cleaning</h1>
 <p><b>Dear Home Owner,</b></p>
 
-<p><b>The All Natural Cleaning Company</b> is the first janitorial company in Albuquerque New Mexico, and possibly in
+<p><b>The All Natural Cleaning Company</b> is the first janitorial company and possibly in
 the country, to use all natural nontoxic chemical free cleaning solutions to clean your house.</p>
 
 <p>What do we mean by natural? We mean things that you use around your house, in your food pantry, things in

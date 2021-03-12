@@ -1,10 +1,13 @@
 <?php
-//$AutoLoadDEBUG = 1;
 $_site = require_once(getenv("SITELOADNAME"));
+ErrorClass::setDevelopment(true);
+ErrorClass::setNoEmailErrs(true);
 $S = new $_site->className($_site);
 
-$h->title = "Albuquerque, New Mexico - All Natural Cleaning Company";
-$h->desc = "All Natural Cleaning Company of Albuquerque. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
+// Updated the phone number in includes/head.i.php
+
+$h->title = "All Natural Cleaning Company";
+$h->desc = "All Natural Cleaning Company. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 
 $h->css = <<<EOF
   <style>
@@ -88,15 +91,15 @@ list($top, $footer) = $S->getPageTopBottom($h, $b);
 echo <<<EOF
 $top
 <main>
-<!-- All Natural Cleaning Company, Albuquerque NM. Toxin Free, Chemical Free, All natural and Organic. Home and Office Cleaning. -->
+<!-- All Natural Cleaning Company. Toxin Free, Chemical Free, All natural and Organic. Home and Office Cleaning. -->
 <div class="callus">
   <h1>All Natural Cleaning Company</h1>
   <span class="toxinfree">100% Toxin Free<br>100% Natural</span><br>Call us $S->__Phone<br>
 <a href="getquote.php">Get a free quote</a></div>
-<img src="https://bartonphillips.net/images/allnatural/woman-left-croped.png" alt="All Natural Cleaning Company of Albuquerque: Woman with Cleaning Equipment">
+<img src="https://bartonphillips.net/images/allnatural/woman-left-croped.png" alt="All Natural Cleaning Company: Woman with Cleaning Equipment">
 
 <div class="content">
-<p>The <b>All Natural Cleaning Company</b> is the first company in Albuquerque, New Mexico, to use 100%
+<p>The <b>All Natural Cleaning Company</b> is the first company to use 100%
 natural organic products like lemons, baking soda, olive oil, vinegar and other
 toxin free substances to clean your home or office.</p>
 

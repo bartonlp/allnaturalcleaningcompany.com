@@ -1,7 +1,6 @@
 <?php
 $_site = require_once(getenv("SITELOADNAME"));
 ErrorClass::setDevelopment(true);
-ErrorClass::setNoEmailErrs(true);
 $S = new $_site->className($_site);
 
 // Updated the phone number in includes/head.i.php
@@ -86,7 +85,7 @@ h1 {
   </style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top

@@ -9,6 +9,14 @@ $this->__City = "";
 $this->__State = "";
 $this->__Zip = "";
 
+if($this->noTrack === true || $this->nodb === true) {
+  $trackerStr = '';
+} else {
+  $trackerStr =<<<EOF
+<script data-lastid="$this->LAST_ID" src="https://bartonphillips.net/js/tracker.js"></script>
+EOF;
+} 
+
 $keywords = "All Natural Cleaning, Cleaning Services, Home and Office Cleaning, ".
             "Chemical Free Cleaning, Toxin Free Cleaning, ".
             "Window Cleaning, Carpet Cleaning, Janitorial Services";
@@ -78,7 +86,7 @@ html {
   <!-- jQuery and Javascripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script> var lastId = $this->LAST_ID; </script>
-  <script src="https://bartonphillips.net/js/tracker.js"></script>
+$trackerStr
   <!-- Custom Scripts -->
 {$arg['extra']}
 {$arg['script']}

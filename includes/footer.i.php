@@ -1,4 +1,5 @@
 <?php
+// BLP 2021-04-11 -- g+ is no more.
 // BLP 2018-06-21 -- NOTE we are using PUG and this is ONLY used if the xxx.php is the url!
 //  See the pug/layout.pug!
 
@@ -31,10 +32,6 @@ return <<<EOF
   <a href="https://www.facebook.com/allnaturalcleaningcompany/"
     class="icon-button facebook">
     <i class="icon-facebook"></i>
-    <span></span>
-  </a>
-  <a href="http://plus.google.com" class="icon-button google-plus">
-    <i class="icon-google-plus"></i>
     <span></span>
   </a>
 </div>

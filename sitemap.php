@@ -1,1 +1,1 @@
-../bartonlp/sitemap.php
+../bartonphillipsnet/sitemap.php

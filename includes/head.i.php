@@ -79,13 +79,10 @@ html {
   display: none;
 }
   </style>
-  <!-- css is not css but a link to tracker via .htaccess RewriteRule. -->
-  <link rel="stylesheet" href="/csstest-$this->LAST_ID.css" title="blp test">
   {$arg['link']}
   <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
   <!-- jQuery and Javascripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script> var lastId = $this->LAST_ID; </script>
 $trackerStr
   <!-- Custom Scripts -->
 {$arg['extra']}

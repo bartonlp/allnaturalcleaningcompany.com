@@ -24,15 +24,15 @@ return <<<EOF
 <!-- Small Nav bar for smaller screens, phones and tablets -->
   <div id="smallnavbar">
     <label for="smallmenu" class="xicon-menu">Menu</label>
-    <input type="checkbox" id="smallmenu" role="button">
+    <input type="checkbox" id="smallmenu">
 
     <ul id="smenu">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="residential.php">Residential</a></li>
-      <li><a href="commercial.php">Commercial</a></li>
-      <li><a href="about.php">About</a></li>
+      <li><a href="/index.php">Home</a></li>
+      <li><a href="/residential.php">Residential</a></li>
+      <li><a href="/commercial.php">Commercial</a></li>
+      <li><a href="/about.php">About</a></li>
       <li><a href="https://allnaturalcleaningcompany.blogspot.com">Blog</a></li>
-      <li><a href="contact.php">Contact</a></li>
+      <li><a href="/contact.php">Contact</a></li>
     </ul>
   </div>
   

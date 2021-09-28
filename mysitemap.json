@@ -19,7 +19,7 @@
     "footerFile": "includes/footer.i.php",
     "count": true,
     "countMe": false,
-    "myUri": "https://bartonphillips.net/myUri.json",
+    //"myUri": "https://bartonphillips.net/myUri.json",
     "EMAILADDRESS": "allnaturalcleaningcompany@gmail.com",
     "EMAILRETURN": "allnaturalcleaningcompany@gmail.com",
     "EMAILFROM": "allnaturalcleaningcompany@gmail.com"

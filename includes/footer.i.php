@@ -1,12 +1,12 @@
 <?php
+// BLP 2021-10-24 -- counterWigget and lastmod passed in form getPageFooter($b). We don't use
+// counterWigget.
 // BLP 2021-04-11 -- g+ is no more.
 // BLP 2018-06-21 -- NOTE we are using PUG and this is ONLY used if the xxx.php is the url!
 //  See the pug/layout.pug!
 
 // Footer file
 // Render the Footer
-
-$lastmod = date("M j, Y H:i", getlastmod());
 
 return <<<EOF
 <style>
@@ -41,10 +41,9 @@ return <<<EOF
 <footer>
 <address>
   Copyright &copy; $this->copyright<br>
-  Last Modified: $lastmod
+  $lastmod
 </address>
 </footer>
-{$arg['script']}
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121110438-1"></script>
 <script>
@@ -54,6 +53,7 @@ return <<<EOF
 
   gtag('config', 'UA-121110438-1');
 </script>
+{$b->script}
 </body>
 </html>
 EOF;

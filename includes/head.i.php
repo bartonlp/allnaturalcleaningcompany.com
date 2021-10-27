@@ -22,10 +22,6 @@ $keywords = "All Natural Cleaning, Cleaning Services, Home and Office Cleaning, 
             "Chemical Free Cleaning, Toxin Free Cleaning, ".
             "Window Cleaning, Carpet Cleaning, Janitorial Services";
 
-if(!empty($arg['keywords'])) {
-  $keywords .= ", {$arg['keywords']}";
-}
-
 $structData = <<<EOF
 <script type="application/ld+json">
 {
@@ -49,8 +45,9 @@ EOF;
 
 return <<<EOF
 <head>
-  <title>{$arg['title']}</title>
+  <title>{$h->title}</title>
   <!-- METAs -->
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset='utf-8'/>
   <meta name="copyright" content="$this->copyright">
   <meta name="Author" content="$this->author"/>
@@ -58,9 +55,8 @@ return <<<EOF
     All Natural Cleaning Company.
     Home and office cleaning with natural, toxin free products.
   -->
-  <meta name="description" content="{$arg['desc']}"/>
-  <meta name="keywords" content="$keywords"/>
-  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="description" content="{$h->desc}"/>
+  <meta name="keywords" content="$h->keywords"/>
   <meta name="google-site-verification" content="vBqb7BadCBGAHjG87iKhlKuzIDgauuxWa2lLP_p8UEE" />
 
   <!--  Add Open Graph meta tags -->
@@ -80,14 +76,16 @@ html {
   display: none;
 }
   </style>
-  {$arg['link']}
+  {$h->link}
   <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
   <!-- jQuery and Javascripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+  <script>jQuery.migrateMute = false; jQuery.migrateTrace = false;</script>
 $trackerStr
   <!-- Custom Scripts -->
-{$arg['extra']}
-{$arg['script']}
-{$arg['css']}
+{$h->extra}
+{$h->script}
+{$h->css}
 </head>
 EOF;

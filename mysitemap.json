@@ -6,6 +6,7 @@
     "className": "SiteClass",
     "copyright": "All Natural Cleaning Company",
     "author": "Barton L. Phillips, mailto:bartonphillips@gmail.com, http://www.bartonphillips.com",
+    "keywords": "All Natural Cleaning, natural cleaning products",
     "masterdb": "barton",
     "dbinfo": {
         "host": "localhost",

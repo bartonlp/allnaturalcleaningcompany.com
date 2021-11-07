@@ -1,9 +1,9 @@
 # BLP 2019-10-29 -- NOT USING PUG
 Header set Access-Control-Allow-Origin "*"
 
-order allow,deny
-allow from all
-SetEnv SITELOAD /var/www/vendor/bartonlp/site-class/includes
+# Apache2 2.4 uses Require
+Require all granted
+
 SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
 
 AddType text/html .html .php

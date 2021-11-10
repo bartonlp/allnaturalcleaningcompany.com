@@ -1,6 +1,5 @@
 <?php
-// BLP 2021-08-17 -- Custon head.i.php, it does not do the standard replacements from $h or
-// mysitemap.json.
+// BLP 2021-08-17 -- Custon head.i.php
 // We do not use PUG.
 
 $this->__Phone = " (407) 779-1777";

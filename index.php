@@ -9,7 +9,10 @@ $h->title = "All Natural Cleaning Company";
 $h->desc = "All Natural Cleaning Company. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 
 $h->css = <<<EOF
-  <style>
+<style>
+* {
+  box-sizing: border-box;
+}
 main img {
   width: 100%;
 }
@@ -82,7 +85,7 @@ h1 {
     font-size: 100%;
   }
 }
-  </style>
+</style>
 EOF;
 
 list($top, $footer) = $S->getPageTopBottom($h);

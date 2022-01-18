@@ -1,4 +1,5 @@
 <?php
+// BLP 2021-12-15 -- add geo.js
 // BLP 2021-10-24 -- counterWigget and lastmod passed in form getPageFooter($b). We don't use
 // counterWigget.
 // BLP 2021-04-11 -- g+ is no more.
@@ -7,6 +8,9 @@
 
 // Footer file
 // Render the Footer
+if($b->noGeo !== true) {
+  $geo = "<script src='https://bartonphillips.net/js/geo.js'></script>";
+}
 
 return <<<EOF
 <style>
@@ -50,9 +54,9 @@ return <<<EOF
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-121110438-1');
 </script>
+$geo
 {$b->script}
 </body>
 </html>

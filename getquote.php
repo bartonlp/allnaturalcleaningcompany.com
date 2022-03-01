@@ -1,5 +1,24 @@
 <?php
-//$AutoLoadDEBUG = 1;
+/*
+CREATE TABLE `getquote` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phone` varchar(100) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `zipcode` varchar(10) DEFAULT NULL,
+  `service` varchar(50) DEFAULT NULL,
+  `frequency` varchar(30) DEFAULT NULL,
+  `sqrfeet` int DEFAULT NULL,
+  `extrainfo` text,
+  `verify` tinyint(1) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+*/
+
 $_site = require_once(getenv("SITELOADNAME"));
 //ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
@@ -52,6 +71,7 @@ pre {
 EOF;
 
 $h->script = <<<EOF
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://bartonphillips.net/js/allnatural/js/maskedinput.js"></script>
   <script>
 jQuery(document).ready(function($) {
@@ -61,38 +81,81 @@ jQuery(document).ready(function($) {
 EOF;
 
 $h->title = "Get A Quote - All Natural Cleaning Company";
-$h->desc = "Get a Quote for Home or Commercial cleaning. Cheamical free cleaning. Residential and Commercial cleaning.";
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom($h, $b);
+
+$recaptcha = require_once("/var/www/bartonphillipsnet/PASSWORDS/allnatural-recaptcha.php");
 
 // POST Date from form.
 
 if($_POST) {
   $keys = $values = $info = '';
+
+  $post['response'] = $_POST['g-recaptcha-response'];
+  $post['secret'] = $recaptcha['secretKey']; // google grcapcha key
+  unset($_POST['g-recaptcha-response']);
   
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+  $ret = curl_exec($ch);
+  $retAr = json_decode($ret, true);
+
   foreach($_POST as $k=>$v) {
     $keys .= "$k,";
     $values .= "'". $S->escape($v) ."',";
     $info .= "$k: $v\n";
   }
-  $keys = rtrim($keys, ',');
-  $values = rtrim($values, ',');
+
+  $agent = substr($S->agent, 0, 254);
+  
+  $keys = "ip, agent, " . $keys . 'verify';
+  $verify = $retAr['success'] == '1' ? 1 : 0;
+  $values = "'$S->ip', '$agent', $values" . $verify;
+  $reason = $retAr['error-codes'][0];
+
   $sql = "insert into getquote ($keys) values($values)";
 
-   $S->query($sql);
-   mail($S->EMAILADDRESS, "Get Quote", $info, "From: info@allnaturalcleaningcompany.com");
-  echo <<<EOF
-$top
+  $S->query($sql);
+
+  $address = $S->EMAILADDRESS;
+  //$address = "bartonphillips@gmail.com";
+  
+  if($verify == 1) {
+    mail($address, "Get Quote", $info, "From: info@allnaturalcleaningcompany.com\r\nBcc: bartonphillips@gmail.com", "-fbarton@bartonphillips.com");
+    
+    $msg = <<<EOF
 <main>
 <h1 class="title">Your Quote</h1>
 <pre>$info</pre>
 <h2>Your Data Has Been Sent</h2>
 <p>Thank You</p>
+<p>This page will redirect to <a href="index.php"><b>The Home Page</b></a> in five seconds.</p>
 </main>
+EOF;
+    header( "refresh:5;url=index.php" );
+  } else {
+    $msg = <<<EOF
+<main>
+<h1>Failed Verification. Try Again.</h1>
+<p>$reason</p>
+<p>This page will redirect to <a href="contactus.php"><b>Contact Us</b></a> in five seconds.</p>
+$footer
+EOF;
+    header( "refresh:5;url=contactus.php" );
+  }
+  
+  echo <<<EOF
+$top
+$msg
 $footer
 EOF;
   exit();
 }
+
+// Start Page
 
 echo <<<EOF
 $top
@@ -126,13 +189,14 @@ $top
   <option>Monthly</option>
   <option>Other ('Additional Info' below)</option>
 </select></td></tr>
-<tr><th>Approx. Square Footage</th><td><input type="number" name="sqrfeet"></td></tr>
+<tr><th>Approx. Square Footage</th><td><input type="number" name="sqrfeet" value="0"></td></tr>
 <tr><th>Additional Info</th><td><textarea name="extrainfo"></textarea></td><tr>
 </tbody>
 </table>
+<div class="g-recaptcha" data-sitekey="{$recaptcha['siteKey']}"></div>
 <button type="submit">Get A Quote</button>
 </form>
-<p>Or <a href="contact.php">Call up for a quote $S->__Phone</a></p>
+<p>Or <a href="contactus.php">Call up for a quote $S->__Phone</a></p>
 </main>
 $footer
 EOF;

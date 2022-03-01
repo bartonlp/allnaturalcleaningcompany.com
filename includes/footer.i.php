@@ -7,10 +7,6 @@
 //  See the pug/layout.pug!
 
 // Footer file
-// Render the Footer
-if($b->noGeo !== true) {
-  $geo = "<script src='https://bartonphillips.net/js/geo.js'></script>";
-}
 
 return <<<EOF
 <style>

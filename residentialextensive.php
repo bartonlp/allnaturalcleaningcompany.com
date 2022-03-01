@@ -78,7 +78,7 @@ $top
 proper cleaning items and equipment.</p>
 <a class="callusnow" href="residentialbasic.php">Basic Plan</a>
 <p><a href="getquote.php">Get a Quote</a> or
-<a href="contact.php">call us for a quote</a></p>
+<a href="contactus.php">call us for a quote</a></p>
 </main>
 $footer
 EOF;

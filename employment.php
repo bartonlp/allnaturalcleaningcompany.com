@@ -1,11 +1,40 @@
 <?php
-//$AutoLoadDEBUG = 1;
+/*
+CREATE TABLE `employment` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ip` varchar(40) DEFAULT NULL,
+  `agent` varchar(254) DEFAULT NULL,
+  `message` text,
+  `verify` tinyint(1) DEFAULT NULL,
+  `reason` varchar(50) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `lasttime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+*/
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
+
+$h->script = <<<EOF
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+EOF;
+
+$recaptcha = require_once("/var/www/bartonphillipsnet/PASSWORDS/allnatural-recaptcha.php");
 
 if($_POST['submit']) {
   //vardump($_POST);  
   extract($_POST);
+  $post['response'] = $_POST['g-recaptcha-response'];
+  $post['secret'] = $recaptcha['secretKey']; // google grcapcha key
+  
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+  $ret = curl_exec($ch);
+  $retAr = json_decode($ret, true);
 
   $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   
@@ -32,6 +61,7 @@ if($_POST['submit']) {
   foreach($refphone as $key=>$val) {
     $rphone .= "refphone$key: $val\n";
   }
+  
   $msg = <<<EOF
 Full name: $name
 Email: $email
@@ -52,21 +82,52 @@ $r
 Ref Phone
 $rphone
 EOF;
-  mail($S->EMAILADDRESS, "Employment Request", $msg, "From: allnatural@allnaturalcleaningcompany.com");
-  list($top, $footer) = $S->getPageTopBottom($h);
+
+  $verify = $retAr['success'] == "1" ? 1 : "0";
+  $reason = $retAr['error-codes'][0];
+  $agent = substr($S->agent, 0, 254);
+  
+  $S->query("insert into employment (ip, agent, message, verify, reason, created, lasttime) ". 
+            "values('$S->ip', '$agent', '$msg', '$verify', '$reason', now(), now())");
+
+  if($verify == 1) {
+    $address = $S->EMAILADDRESS;
+    //$address = "bartonphillips@gmail.com";
+    mail($address, "Employment Request", $msg, "From: allnatural@allnaturalcleaningcompany.com\r\nBcc: bartonphillips@gmail.com", "-fbarton@bartonphillips.com");
+    header("refresh:5;url=index.php");    
+
+    $msg = <<<EOF
+<h1>Message Sent</h1>
+<pre>$msg</pre>
+<a href="index.php">Back to Home Page</a>
+EOF;
+  } else {
+    header("refresh:5;url=employment.php");
+
+    $msg = <<<EOF
+<main>
+<h1>Captcha Failed. Try Again</h1>
+<p>$reason</p>
+<a href='contactus.php'>Return to Employment</a>
+EOF;
+  }
+
+  $h->title = "Employment Posted";
+    
+  [$top, $footer] = $S->getPageTopBottom($h);
 
   echo <<<EOF
 $top
-<h1>Message Sent</h1><pre>$msg</pre>
-<a href="/">Back to Home Page</a>
+$msg
 $footer
 EOF;
 
   exit();
 }
 
-$h->title = "$S->__City, $S->__State - All Natural Cleaning Company";
-$h->desc = "All Natural Cleaning Company. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
+// Start Main
+
+$h->title = "Employment";
 $h->css = <<<EOF
   <style>
 main {
@@ -100,7 +161,7 @@ input[type='radio'] {
 input[type='submit'] {
   border-radius: .5rem;
   width: 5rem;
-  margin: 2rem;
+  margin: 5px 2%;
   padding: .5rem;
   background-color: green;
   color: white;
@@ -111,6 +172,7 @@ input[type='submit'] {
 h1 {
   text-align: center;
 }
+.g-recaptcha { margin: 5px 2%; }
 @media (max-width: 600px) {
   main {
     display: block;
@@ -119,7 +181,7 @@ h1 {
   </style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom($h, $b);
 
 echo <<<EOF
 $top
@@ -238,8 +300,10 @@ title="Phone format (999)999-9999 or 999999999"></td>
 <tr><td><input type='text' name='ref[]' placeholder="Name"></td><td><input type='tel' name='refphone[]' placeholder="Phone"></td></tr>
 </tbody>
 </table>
+<div class="g-recaptcha" data-sitekey={$recaptcha['siteKey']}></div>
 <input type='submit' name="submit" value="Submit">
 </form>
 </main>
+<hr>
 $footer
 EOF;

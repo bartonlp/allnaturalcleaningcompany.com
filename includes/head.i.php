@@ -9,18 +9,6 @@ $this->__City = "";
 $this->__State = "";
 $this->__Zip = "";
 
-if($this->noTrack === true || $this->nodb === true) {
-  $trackerStr = '';
-} else {
-  $trackerStr =<<<EOF
-<script data-lastid="$this->LAST_ID" src="https://bartonphillips.net/js/tracker.js"></script>
-EOF;
-} 
-
-$keywords = "All Natural Cleaning, Cleaning Services, Home and Office Cleaning, ".
-            "Chemical Free Cleaning, Toxin Free Cleaning, ".
-            "Window Cleaning, Carpet Cleaning, Janitorial Services";
-
 $structData = <<<EOF
 <script type="application/ld+json">
 {
@@ -66,17 +54,15 @@ return <<<EOF
 
   <!-- Add canonical link because we have multiple urls pointing here -->
   <link rel="canonical" href="https://www.allnaturalcleaningcompany.com" />
-  <link rel="shortcut icon" href="https://bartonphillips.net/images/favicon.ico" />
+{$h->favicon}
   <!-- Structured Data -->
-  $structData
+$structData
   <!-- CSS -->
-  <style>
-html {
-  display: none;
-}
-  </style>
-  {$h->link}
-  <link rel="stylesheet" href="https://bartonphillips.net/css/allnatural/allnatural.css">
+<!--<style>
+  html { display: none }
+</style>-->
+<link rel="stylesheet" href="{$h->defaultCss}" title="default">
+{$h->link}
   <!-- jQuery and Javascripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>

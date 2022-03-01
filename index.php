@@ -1,12 +1,10 @@
 <?php
 $_site = require_once(getenv("SITELOADNAME"));
-ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
 // Updated the phone number in includes/head.i.php
 
 $h->title = "All Natural Cleaning Company";
-$h->desc = "All Natural Cleaning Company. We clean with 100% toxin free products. Full service Commercial Janitorial and Home cleaning.";
 
 $h->css = <<<EOF
 <style>
@@ -144,8 +142,8 @@ ourselves about the chemicals we left behind.</p>
 
 <div class="center">
 <a class="getquote" href="employment.php">Employment Application</a>&nbsp;
-<a class="getquote" href="contact.php">Email or Call Us</a>&nbsp;
-<a class="getquote" href="contact.php?value=I+want+to+make+an+appointment">Appointment</a>&nbsp;
+<a class="getquote" href="contactus.php">Email or Call Us</a>&nbsp;
+<a class="getquote" href="contactus.php?value=I+want+to+make+an+appointment">Appointment</a>&nbsp;
 <a class="getquote" href="getquote.php">Get A Quote</a>
 </div>
 <br>

@@ -5,7 +5,7 @@
    {"item": "http://www.allnaturalcleaningcompany.com/residentialextensive.php", "frequency": "daily", "priority": "1"},
    {"item": "http://www.allnaturalcleaningcompany.com/commercial.php", "frequency": "daily", "priority": "1"},
    {"item": "http://www.allnaturalcleaningcompany.com/about.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/contact.php", "frequency": "daily", "priority": "1"},
+   {"item": "http://www.allnaturalcleaningcompany.com/contactus.php", "frequency": "daily", "priority": "1"},
    {"item": "http://www.allnaturalcleaningcompany.com/getquote.php", "frequency": "daily", "priority": "1"},
    {"item": "http://www.allnaturalcleaningcompany.com/recipes.php", "frequency": "daily", "priority": "1"}
 ]

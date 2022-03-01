@@ -100,7 +100,7 @@ teams leave the building to make sure work is satisfactory.</li>
 </ol>  
 
 <p><a href="getquote.php">Get a Quote</a> or
-<a href="contact.php">call us for a quote</a></p>
+<a href="contactus.php">call us for a quote</a></p>
 <p>Commercial facilities we service:</p>
 <ul>
 <li>Banks</li>

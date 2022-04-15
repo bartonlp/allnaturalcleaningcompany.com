@@ -4,16 +4,15 @@
 
 return <<<EOF
 <header id="header">
+<!-- https://allnaturalcleaningcompany.com banner.i.php -->
 <img src="https://bartonphillips.net/images/allnatural/BubbleLogo.png" alt="bubble-logo">
-<!--<img id="logo" data-image="" src="https://bartonphillips.net/images/blank.png" alt="blank image">
-<img id="dummyimg" src="https://bartonphillips.net/tracker.php?page=noscript&id=$this->LAST_ID">-->
 $image1
 $imsge2
 <div>All Natural Cleaning Company <span class="phone">Call Us Today: $this->__Phone</span>
 
 <!-- Big Nav bar for large screens -->
-  <span id="bignavbar">
-    <ul>
+<!--  <span id="bignavbar"> -->
+    <ul id="bignavbar">
       <li><a href="index.php">Home</a></li>
       <li><a href="residential.php">Residential</a></li>
       <li><a href="commercial.php">Commercial</a></li>
@@ -21,7 +20,7 @@ $imsge2
       <li><a href="https://allnaturalcleaningcompany.blogspot.com">Blog</a></li>
       <li><a href="contactus.php">Contact</a></li>
     </ul>
-  </span>
+<!--  </span> -->
 
 <!-- Small Nav bar for smaller screens, phones and tablets -->
   <div id="smallnavbar">
@@ -49,7 +48,7 @@ html {
 <p>
 $image3
 Your browser either does not support <b>JavaScripts</b> or you have JavaScripts disabled, in either case your browsing
-experience will be significantly impaired. If your browser supports JavaScripts but you have it disabled consider enabaling
+experience will be significantly impaired. If your browser supports JavaScripts but you have it disabled consider enabling
 JavaScripts conditionally if your browser supports that. Sorry for the inconvienence.</p>
 </noscript>
 </header>

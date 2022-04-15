@@ -9,7 +9,8 @@
     "keywords": "All Natural Cleaning, Cleaning Services, Home and Office Cleaning, Chemical Free Cleaning, Toxin Free Cleaning, Window Cleaning, Carpet Cleaning, Janitorial Services",
     "desc": "Contact Us at allnatural@allnaturalcleaningcompany.com. All Natural Cleaning Company. Toxin free Home and Commercial cleaning.",
     "defaultCss": "https://bartonphillips.net/css/allnatural/allnatural.css",
-    "favicon": "https://bartonphillips.net/images/favicon.ico",    
+    "favicon": "https://bartonphillips.net/images/favicon.ico",
+    "canonical": "https://www.allnaturalcleaningcompany.com",
     "masterdb": "barton",
     "dbinfo": {
         "host": "localhost",

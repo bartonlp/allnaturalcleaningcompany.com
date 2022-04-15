@@ -74,7 +74,7 @@ $h->script = <<<EOF
         "description": "For all surfaces except glass",
         "recipeIngredient": [
           "2 cups water",
-          "2 tablespoons fresh squezed lemon juce",
+          "2 tablespoons fresh squezed lemon juice",
           "1/2 teaspoon Dr. Bronner's Castile soap",
           "1 tablespoon baking soda"
         ],

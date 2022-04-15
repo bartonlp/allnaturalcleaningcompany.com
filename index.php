@@ -7,10 +7,6 @@ $S = new $_site->className($_site);
 $h->title = "All Natural Cleaning Company";
 
 $h->css = <<<EOF
-<style>
-* {
-  box-sizing: border-box;
-}
 main img {
   width: 100%;
 }
@@ -83,7 +79,6 @@ h1 {
     font-size: 100%;
   }
 }
-</style>
 EOF;
 
 list($top, $footer) = $S->getPageTopBottom($h);
@@ -148,7 +143,6 @@ ourselves about the chemicals we left behind.</p>
 </div>
 <br>
 
-</div>
 </div>
 </main>
 $footer

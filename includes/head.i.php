@@ -32,45 +32,36 @@ EOF;
 
 return <<<EOF
 <head>
-  <title>{$h->title}</title>
-  <!-- METAs -->
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <meta charset='utf-8'/>
-  <meta name="copyright" content="$this->copyright">
-  <meta name="Author" content="$this->author"/>
+  <!-- https://allnaturalcleaningcompany.com head.i.php -->
+  $h->title
+  $h->viewport
+  $h->charset
+  $h->copyright
+  $h->author
   <!--
     All Natural Cleaning Company.
     Home and office cleaning with natural, toxin free products.
   -->
-  <meta name="description" content="{$h->desc}"/>
-  <meta name="keywords" content="$h->keywords"/>
-  <meta name="google-site-verification" content="vBqb7BadCBGAHjG87iKhlKuzIDgauuxWa2lLP_p8UEE" />
-
+  $h->desc
+  $h->keywords
+  <meta name="google-site-verification" content="vBqb7BadCBGAHjG87iKhlKuzIDgauuxWa2lLP_p8UEE">
   <!--  Add Open Graph meta tags -->
-  <meta property="og:title" content="All Natural Cleaning Company" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.allnaturalcleaningcompany.com" />
-  <meta property="og:image" content="https://bartonphillips.net/images/allnatural/woman-left-croped.png" />
-
+  <meta property="og:title" content="All Natural Cleaning Company">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.allnaturalcleaningcompany.com">
+  <meta property="og:image" content="https://bartonphillips.net/images/allnatural/woman-left-croped.png">
   <!-- Add canonical link because we have multiple urls pointing here -->
-  <link rel="canonical" href="https://www.allnaturalcleaningcompany.com" />
-{$h->favicon}
+  $h->canonical
+  $h->favicon
+  $h->defaultCss
+  $h->link
+  $jQuery
+  $trackerStr
+  $h->extra
+  $h->script
+  $h->inlineScript
+  $h->css
   <!-- Structured Data -->
-$structData
-  <!-- CSS -->
-<!--<style>
-  html { display: none }
-</style>-->
-<link rel="stylesheet" href="{$h->defaultCss}" title="default">
-{$h->link}
-  <!-- jQuery and Javascripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
-  <script>jQuery.migrateMute = false; jQuery.migrateTrace = false;</script>
-$trackerStr
-  <!-- Custom Scripts -->
-{$h->extra}
-{$h->script}
-{$h->css}
+  $structData
 </head>
 EOF;

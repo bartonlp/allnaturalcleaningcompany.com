@@ -31,7 +31,6 @@
     "bannerFile": "includes/banner.i.php",
     "footerFile": "includes/footer.i.php",
     "count": true,
-    "countMe": false,
     //"trackerImg1": "/images/blp-image.png", // The trackerImg must have a slash before or make them a full url.
     //"trackerImg2": "/images/146624.png",
     "EMAILADDRESS": "allnaturalcleaningcompany@gmail.com",

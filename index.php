@@ -81,6 +81,11 @@ h1 {
 }
 EOF;
 
+$h->inlineScript = <<<EOF
+var thesite = '$S->siteName';
+var thisip = '$S->ip';
+EOF;
+
 list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF

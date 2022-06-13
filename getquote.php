@@ -104,6 +104,7 @@ if($_POST) {
   $retAr = json_decode($ret, true);
 
   foreach($_POST as $k=>$v) {
+    if($k == 'submit') continue;
     $keys .= "$k,";
     $values .= "'". $S->escape($v) ."',";
     $info .= "$k: $v\n";

@@ -13,7 +13,7 @@ $h->script = <<<EOF
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 EOF;
 
-$recaptcha = require_once("/var/www/bartonphillipsnet/PASSWORDS/allnatural-recaptcha.php");
+$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php");
 
 $h->css = <<<EOF
   <style>

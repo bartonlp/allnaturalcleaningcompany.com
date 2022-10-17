@@ -1,3 +1,7 @@
+/*
+ * SPECIAL json for use by siteload.php. Normal json will not allow
+ * comments.
+ */
 {
     "siteDomain": "allnaturalcleaningcompany.com",
     "siteName": "Allnatural",

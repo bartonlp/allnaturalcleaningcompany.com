@@ -84,7 +84,7 @@ $h->title = "Get A Quote - All Natural Cleaning Company";
 
 [$top, $footer] = $S->getPageTopBottom($h, $b);
 
-$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php");
+$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php"); // This is an assoc array
 
 // POST Date from form.
 

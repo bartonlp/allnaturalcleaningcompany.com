@@ -13,7 +13,7 @@ $h->script = <<<EOF
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 EOF;
 
-$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php");
+$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php"); // This is an assoc array
 
 $h->css = <<<EOF
   <style>
@@ -105,7 +105,7 @@ if(isset($_POST['submit'])) {
   $subject = $S->escape($subject);
   $msg = $S->escape($msg);
   $post['response'] = $_POST['g-recaptcha-response'];
-  $post['secret'] = $recaptcha['secretKey']; // google grcapcha key
+  $post['secret'] = $recaptcha['secretKey']; // google recapcha key
   
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

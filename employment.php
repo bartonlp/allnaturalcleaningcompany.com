@@ -20,7 +20,7 @@ $h->script = <<<EOF
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 EOF;
 
-$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php");
+$recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php"); // This is a assoc array
 
 if($_POST['submit']) {
   //vardump($_POST);  

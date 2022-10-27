@@ -4,56 +4,56 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/index.php</loc>
-		<lastmod>2016-08-17T19:35:57Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/index.php</loc>
+		<lastmod>2022-05-14T14:57:49Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/residential.php</loc>
-		<lastmod>2016-08-12T21:09:36Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/residential.php</loc>
+		<lastmod>2022-02-08T03:17:40Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/residentialbasic.php</loc>
-		<lastmod>2016-08-10T18:45:41Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/residentialbasic.php</loc>
+		<lastmod>2022-02-08T03:17:55Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/residentialextensive.php</loc>
-		<lastmod>2016-08-12T21:09:36Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/residentialextensive.php</loc>
+		<lastmod>2022-02-08T03:18:07Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/commercial.php</loc>
-		<lastmod>2016-08-10T18:48:02Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/commercial.php</loc>
+		<lastmod>2022-02-08T03:31:13Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/about.php</loc>
-		<lastmod>2016-08-10T18:56:51Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/about.php</loc>
+		<lastmod>2022-02-08T03:12:12Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/contactus.php</loc>
-		<lastmod>2016-08-10T19:02:27Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/contactus.php</loc>
+		<lastmod>2022-10-25T16:29:47Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/getquote.php</loc>
-		<lastmod>2016-08-10T18:50:01Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/getquote.php</loc>
+		<lastmod>2022-10-25T16:31:05Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>http://www.allnaturalcleaningcompany.com/recipes.php</loc>
-		<lastmod>2016-08-01T22:07:52Z</lastmod>
+		<loc>https://www.allnaturalcleaningcompany.com/recipes.php</loc>
+		<lastmod>2022-03-06T12:55:35Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>

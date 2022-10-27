@@ -1,12 +1,12 @@
 [
-   {"item": "http://www.allnaturalcleaningcompany.com/index.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/residential.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/residentialbasic.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/residentialextensive.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/commercial.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/about.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/contactus.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/getquote.php", "frequency": "daily", "priority": "1"},
-   {"item": "http://www.allnaturalcleaningcompany.com/recipes.php", "frequency": "daily", "priority": "1"}
+   {"item": "index.php", "frequency": "daily", "priority": "1"},
+   {"item": "residential.php", "frequency": "daily", "priority": "1"},
+   {"item": "residentialbasic.php", "frequency": "daily", "priority": "1"},
+   {"item": "residentialextensive.php", "frequency": "daily", "priority": "1"},
+   {"item": "commercial.php", "frequency": "daily", "priority": "1"},
+   {"item": "about.php", "frequency": "daily", "priority": "1"},
+   {"item": "contactus.php", "frequency": "daily", "priority": "1"},
+   {"item": "getquote.php", "frequency": "daily", "priority": "1"},
+   {"item": "recipes.php", "frequency": "daily", "priority": "1"}
 ]
 

@@ -1,4 +1,7 @@
 Archive/
 *.asv#
 .cache_ggshield
+/other
+/script
+Sitemap.xml
 

@@ -1,17 +1,17 @@
 <?php
-//$AutoLoadDEBUG = 1;
+// BLP 2023-02-25 - use new approach
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
-$h->title = "Commercial Janitorial Service - All Natural Cleaning Company";
-$h->desc = "Comercial Janitorial service. All Natural products, no harmfull chemicals or toxins.";
+$S->title = "Commercial Janitorial Service - All Natural Cleaning Company";
+$S->desc = "Comercial Janitorial service. All Natural products, no harmfull chemicals or toxins.";
 
-$h->link = <<<EOF
+$S->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 EOF;
 
-$h->css = <<<EOF
-  <style>
+$S->css = <<<EOF
 .title {
         font-family: 'Tangerine', serif;
         text-align: center;
@@ -39,10 +39,9 @@ h2 {
     margin-left: 0px;
   }
 }
-  </style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

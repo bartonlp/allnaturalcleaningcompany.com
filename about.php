@@ -1,21 +1,21 @@
 <?php
-//$AutoLoadDEBUG = 1;
+// BLP 2023-02-25 - use new approach
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
-$h->title = "About Us - All Natural Cleaning Company";
-$h->desc = "All Natural Cleaning Company. About Us. ".
+$S->title = "About Us - All Natural Cleaning Company";
+$S->desc = "All Natural Cleaning Company. About Us. ".
            "Cleaning service for home and business. We use only all natural products, no toxic chemicals. ".
            "Our products are 99% edable.";
 
-$h->keywords = "About All Natural Cleaning Company";
+$S->keywords = "About All Natural Cleaning Company";
 
-$h->link = <<<EOF
+$S->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 EOF;
 
-$h->css = <<<EOF
-  <style>
+$S->css = <<<EOF
 .title {
         font-family: 'Tangerine', serif;
         text-align: center;
@@ -27,10 +27,9 @@ main {
   width: 15rem;
   float: left;
 }
-  </style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

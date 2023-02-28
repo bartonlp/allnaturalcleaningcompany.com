@@ -1,16 +1,16 @@
 <?php
-//$AutoLoadDEBUG = 1;
+// BLP 2023-02-25 - use new approach
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
-$h->title = "Home Cleaning Plans - All Natural Cleaning Company";
-$h->desc = "Home Cleaning with all natural products. Residential cleaning. No toxins or harmfull chemicals.";
-$h->link = <<<EOF
+$S->title = "Home Cleaning Plans - All Natural Cleaning Company";
+$S->desc = "Home Cleaning with all natural products. Residential cleaning. No toxins or harmfull chemicals.";
+$S->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 EOF;
 
-$h->css = <<<EOF
-  <style>
+$S->css = <<<EOF
 main {
   padding: .5rem;
 }
@@ -49,10 +49,9 @@ div.flex {
           display: none;
         }
 }
-  </style>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

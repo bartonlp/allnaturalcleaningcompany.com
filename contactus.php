@@ -1,22 +1,21 @@
 <?php
-//$AutoLoadDEBUG = 1;
+// BLP 2023-02-25 - use new approach
+
 $_site = require_once(getenv("SITELOADNAME"));
-//ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
-$h->link = <<<EOF
+$S->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 EOF;
 
 // BLP 2022-02-04 -- add recaptcha
-$h->script = <<<EOF
+$S->h_script = <<<EOF
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 EOF;
 
 $recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php"); // This is an assoc array
 
-$h->css = <<<EOF
-  <style>
+$S->css = <<<EOF
 .title {
   font-family: 'Tangerine', serif;
   text-align: center;
@@ -90,13 +89,12 @@ button { background: green; color: white; }
     width: 95%;
   }
 }
-  </style>
 EOF;
 
-$h->title = "Contact Us - All Natural Cleaning Company";
-$h->banner = "<h1>Contact Us</h1>";
+$S->title = "Contact Us - All Natural Cleaning Company";
+$S->banner = "<h1>Contact Us</h1>";
 
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 // Submit from main page
 
@@ -104,15 +102,25 @@ if(isset($_POST['submit'])) {
   extract($_POST); // email, name, subject, msg
   $subject = $S->escape($subject);
   $msg = $S->escape($msg);
-  $post['response'] = $_POST['g-recaptcha-response'];
-  $post['secret'] = $recaptcha['secretKey']; // google recapcha key
-  
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-  curl_setopt($ch, CURLOPT_POST, true);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-  $ret = curl_exec($ch);
+  $response = $_POST['g-recaptcha-response'];
+  $secret = $recaptcha['secretKey']; // google grcaptcha key
+
+  $options = ['http' => [
+                         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                         'method'  => 'POST',
+                         'content' => http_build_query(["response"=>$response, "secret"=>$secret])
+                        ]
+             ];
+
+  // Now we create a context from the options
+
+  $context  = stream_context_create($options);
+
+  // Now this is going to do a POST!
+  // NOTE we must have the full url with https!
+  // If we are doing a post that does not need to return anything we can avoid the assignment.
+
+  $ret = file_get_contents("https://www.google.com/recaptcha/api/siteverify", false, $context);
   $retAr = json_decode($ret, true);
 
   $msg = <<<EOF
@@ -121,7 +129,7 @@ Email: $email
 Message: $msg
 EOF;
   
-  $verify = $retAr['success'] == "1" ? 1 : "0";
+  $verify = empty($retAr['success']) ? 0 : 1; 
   $reason = $retAr['error-codes'][0];
 
   $agent = substr($S->agent, 0, 254);

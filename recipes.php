@@ -1,21 +1,21 @@
 <?php
-//$AutoLoadDEBUG = 1;
+// BLP 2023-02-25 - use new approach
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
-$h->title = "Safe Cleanig Recipes - All Natural Cleaning Company";
-$h->desc = "Safe Cleaning Recipes. All Natural Cleaning. ".
+$S->title = "Safe Cleanig Recipes - All Natural Cleaning Company";
+$S->desc = "Safe Cleaning Recipes. All Natural Cleaning. ".
            "Cleaning service for home and business. We use only all natural products, no toxic chemicals. ".
            "Our products are 99% edable.";
 
-$h->keywords = "Safe Cleaning Recipes";
+$S->keywords = "Safe Cleaning Recipes";
 
-$h->link = <<<EOF
+$S->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 EOF;
 
-$h->css = <<<EOF
-  <style>
+$S->css = <<<EOF
 h3 {
   font-size: 1.17rem;
   display: inline-block;
@@ -49,10 +49,9 @@ main {
   border: 1px solid black;
   padding: .5rem;
 }
-  </style>
 EOF;
 
-$h->script = <<<EOF
+$S->h_script = <<<EOF
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -239,7 +238,7 @@ $h->script = <<<EOF
 </script>
 EOF;
 
-list($top, $footer) = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

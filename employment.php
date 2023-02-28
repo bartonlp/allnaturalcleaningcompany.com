@@ -1,4 +1,5 @@
 <?php
+// BLP 2023-02-25 - use new approach
 /*
 CREATE TABLE `employment` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -16,7 +17,7 @@ CREATE TABLE `employment` (
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
-$h->script = <<<EOF
+$S->h_script = <<<EOF
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 EOF;
 
@@ -112,9 +113,9 @@ EOF;
 EOF;
   }
 
-  $h->title = "Employment Posted";
+  $S->title = "Employment Posted";
     
-  [$top, $footer] = $S->getPageTopBottom($h);
+  [$top, $footer] = $S->getPageTopBottom();
 
   echo <<<EOF
 $top
@@ -127,9 +128,8 @@ EOF;
 
 // Start Main
 
-$h->title = "Employment";
-$h->css = <<<EOF
-  <style>
+$S->title = "Employment";
+$S->css = <<<EOF
 main {
   margin: auto;
   display: flex;
@@ -178,10 +178,9 @@ h1 {
     display: block;
   }
 }
-  </style>
 EOF;
 
-[$top, $footer] = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

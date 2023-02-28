@@ -1,4 +1,5 @@
 <?php
+// BLP 2023-02-25 - use new approach
 /*
 CREATE TABLE `getquote` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -20,16 +21,14 @@ CREATE TABLE `getquote` (
 */
 
 $_site = require_once(getenv("SITELOADNAME"));
-//ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
-$h->link = <<<EOF
+$S->link = <<<EOF
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 EOF;
 
-$h->css =<<<EOF
-  <style>
+$S->css =<<<EOF
 .title {
         font-family: 'Tangerine', serif;
         text-align: center;
@@ -67,10 +66,9 @@ pre {
 .center {
   text-align: center;
 }
-  </style>
 EOF;
 
-$h->script = <<<EOF
+$S->h_script = <<<EOF
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://bartonphillips.net/js/allnatural/js/maskedinput.js"></script>
   <script>
@@ -80,9 +78,9 @@ jQuery(document).ready(function($) {
   </script>
 EOF;
 
-$h->title = "Get A Quote - All Natural Cleaning Company";
+$S->title = "Get A Quote - All Natural Cleaning Company";
 
-[$top, $footer] = $S->getPageTopBottom($h, $b);
+[$top, $footer] = $S->getPageTopBottom();
 
 $recaptcha = require_once("/var/www/PASSWORDS/allnatural-recaptcha.php"); // This is an assoc array
 

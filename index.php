@@ -1,12 +1,14 @@
 <?php
+// BLP 2023-02-25 - use new approach
+
 $_site = require_once(getenv("SITELOADNAME"));
 $S = new $_site->className($_site);
 
 // Updated the phone number in includes/head.i.php
 
-$h->title = "All Natural Cleaning Company";
+$S->title = "All Natural Cleaning Company";
 
-$h->css = <<<EOF
+$S->css = <<<EOF
 main img {
   width: 100%;
 }
@@ -81,12 +83,7 @@ h1 {
 }
 EOF;
 
-$h->inlineScript = <<<EOF
-var thesite = '$S->siteName';
-var thisip = '$S->ip';
-EOF;
-
-list($top, $footer) = $S->getPageTopBottom($h);
+[$top, $footer] = $S->getPageTopBottom();
 
 echo <<<EOF
 $top

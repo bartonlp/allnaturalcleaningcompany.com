@@ -2,6 +2,7 @@
 // BLP 2023-02-25 - use new approach
 
 $_site = require_once(getenv("SITELOADNAME"));
+
 $S = new $_site->className($_site);
 
 // Updated the phone number in includes/head.i.php

@@ -1,13 +1,15 @@
 <?php
 // BLP 2018-06-21 -- NOTE we are using PUG and this is ONLY used if the xxx.php is the url!
 //  See the pug/layout.pug!
+// BLP 2023-08-10 - add style to not display $image2. Also correct spelling, it is $image2 not
+// $imge2. That could be why I was not seeing any normals.
 
 return <<<EOF
 <header id="header">
 <!-- https://allnaturalcleaningcompany.com banner.i.php -->
 <img src="https://bartonphillips.net/images/allnatural/BubbleLogo.png" alt="bubble-logo">
-$image1
-$imsge2
+<style> #headerImage2 { display: none; } </style>
+$image2
 <div>All Natural Cleaning Company <span class="phone">Call Us Today: $this->__Phone</span>
 
 <!-- Big Nav bar for large screens -->

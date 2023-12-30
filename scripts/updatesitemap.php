@@ -1,1 +1,0 @@
-../../bartonlp/scripts/updatesitemap.php

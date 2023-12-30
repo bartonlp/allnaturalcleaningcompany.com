@@ -1,1 +1,0 @@
-../bartonlp.com/otherpages/getcookie.php

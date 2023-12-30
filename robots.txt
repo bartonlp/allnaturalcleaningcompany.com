@@ -1,8 +1,4 @@
 # Allow everyone in.
 User-agent: *
-Disallow:/textus.php
-Disallow:/locator.php
-Disallow:/blog.php
-Disallow: Archive/
 
 Sitemap: http://www.allnaturalcleaningcompany.com/Sitemap.xml

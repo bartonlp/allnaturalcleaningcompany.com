@@ -6,55 +6,7 @@
 	<url>
 		<loc>https://www.allnaturalcleaningcompany.com/index.php</loc>
 		<lastmod>2023-08-18T01:28:36Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/residential.php</loc>
-		<lastmod>2023-02-25T12:59:45Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/residentialbasic.php</loc>
-		<lastmod>2023-02-25T12:48:45Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/residentialextensive.php</loc>
-		<lastmod>2023-02-25T12:49:49Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/commercial.php</loc>
-		<lastmod>2023-02-25T12:37:23Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/about.php</loc>
-		<lastmod>2023-02-25T12:37:06Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/contactus.php</loc>
-		<lastmod>2023-02-25T12:36:41Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/getquote.php</loc>
-		<lastmod>2023-02-25T12:59:45Z</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>https://www.allnaturalcleaningcompany.com/recipes.php</loc>
-		<lastmod>2023-02-25T12:59:45Z</lastmod>
-		<changefreq>daily</changefreq>
+		<changefreq>Yearly</changefreq>
 		<priority>1</priority>
 	</url>
 </urlset>

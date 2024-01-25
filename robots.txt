@@ -1,4 +1,0 @@
-# Allow everyone in.
-User-agent: *
-
-Sitemap: http://www.allnaturalcleaningcompany.com/Sitemap.xml
